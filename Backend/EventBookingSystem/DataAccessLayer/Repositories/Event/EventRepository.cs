@@ -18,33 +18,38 @@ public class EventRepository : IEventRepository
         return await _dbContext.Events.FindAsync(eventId);
     }
 
-    public async Task<IEnumerable<Event>> GetAllAsync(int pageNumber, int pageSize)
+    public async Task<IEnumerable<Event>> GetUpcomingAsync(int pageNumber, int pageSize)
     {
+        var now = DateTime.UtcNow;
         return await _dbContext.Events
-            .OrderBy(e => e.Date)
+            .Where(e => e.StartDate > now)
+            .OrderBy(e => e.StartDate)
             .Skip((pageNumber - 1) * pageSize)
             .Take(pageSize)
             .ToListAsync();
     }
 
-    public async Task<IEnumerable<Event>> GetByCategoryAsync(EventCategory category, int pageNumber, int pageSize)
+    public async Task<IEnumerable<Event>> GetUpcomingByCategoryAsync(EventCategory category, int pageNumber, int pageSize)
     {
+        var now = DateTime.UtcNow;
         return await _dbContext.Events
-            .Where(e => e.Category == category)
-            .OrderBy(e => e.Date)
+            .Where(e => e.Category == category && e.StartDate > now)
+            .OrderBy(e => e.StartDate)
             .Skip((pageNumber - 1) * pageSize)
             .Take(pageSize)
             .ToListAsync();
     }
 
-    public async Task<int> GetTotalCountAsync()
+    public async Task<int> GetUpcomingTotalCountAsync()
     {
-        return await _dbContext.Events.CountAsync();
+        var now = DateTime.UtcNow;
+        return await _dbContext.Events.CountAsync(e => e.StartDate > now);
     }
 
-    public async Task<int> GetTotalCountByCategoryAsync(EventCategory category)
+    public async Task<int> GetUpcomingTotalCountByCategoryAsync(EventCategory category)
     {
-        return await _dbContext.Events.CountAsync(e => e.Category == category);
+        var now = DateTime.UtcNow;
+        return await _dbContext.Events.CountAsync(e => e.Category == category && e.StartDate > now);
     }
 
     public async Task AddAsync(Event evt)
@@ -52,9 +57,14 @@ public class EventRepository : IEventRepository
         await _dbContext.Events.AddAsync(evt);
     }
 
-    public async Task UpdateAsync(Event evt)
+    public async Task<bool> UpdateAsync(Event evt)
     {
-        _dbContext.Events.Update(evt);
+        var existingEvent = await _dbContext.Events.FindAsync(evt.Id);
+        if (existingEvent == null)
+            return false;
+        
+        _dbContext.Entry(existingEvent).CurrentValues.SetValues(evt);
+        return true;
     }
 
     public async Task DeleteAsync(Guid eventId)

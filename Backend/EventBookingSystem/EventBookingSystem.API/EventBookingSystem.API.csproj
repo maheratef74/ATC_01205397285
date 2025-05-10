@@ -24,4 +24,8 @@
       <ProjectReference Include="..\BusinessLogicLayer\BusinessLogicLayer.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Uploads\" />
+    </ItemGroup>
+
 </Project>

@@ -16,5 +16,37 @@
   "EmailAlreadyExists": "Email already exists",
   
   "InvalidCredentials" : "Invalid email or password",
-  "LoginSuccessful" : "Login Successful"
+  "LoginSuccessful" : "Login Successful",
+
+  "EventName": "Event name is required",
+  "EventNameMaxLength": "Event name must not exceed 100 characters",
+  "Description": "Description is required",
+  "DescriptionMaxLength": "Description must not exceed 500 characters",
+  "Category": "Category is required",
+  "StartDate": "Start date is required",
+  "StartDateInvalid": "Invalid start date format",
+  "EndDate": "End date is required",
+  "EndDateInvalid": "Invalid end date format",
+  "DateInvalid": "Invalid date format",
+  "Venue": "Venue is required",
+  "VenueMaxLength": "Venue must not exceed 200 characters",
+  "Price": "Price is required",
+  "PriceInvalid": "Price must be a positive number",
+  "ImageUrl": "Image URL is required",
+  "ImageUrlInvalid": "Invalid image URL",
+
+  "EventCreatedSuccessfully": "Event created successfully",
+  "FailedToCreateEvent": "Failed to create event",
+
+  "EventNotFound": "Event not found",
+  "EventUpdatedSuccessfully": "Event updated successfully",
+
+  "EventDeletedSuccessfully": "Event deleted successfully",
+
+  "FileRequired": "File is required.",
+  "FileUploadTypeInvalid": "Invalid file upload type.",
+
+  "InvalidFileName": "Invalid file name.",
+  "FileMetadataNotFound": "File metadata not found.",
+  "FileNotFoundOnDisk": "File not found on server."
 }

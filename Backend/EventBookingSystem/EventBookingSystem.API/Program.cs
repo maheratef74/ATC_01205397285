@@ -11,6 +11,7 @@ using DataAccessLayer.DbContext;
 using DataAccessLayer.Entities;
 using DataAccessLayer.Repositories.Booking;
 using DataAccessLayer.Repositories.Event;
+using DataAccessLayer.Repositories.UploadedFile;
 using DataAccessLayer.Repositories.User;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -105,7 +106,7 @@ builder.Services.AddScoped<IBookingRepository, BookingRepository>();
 builder.Services.AddScoped<IFileService, FileService>();
 builder.Services.AddScoped<IResponseService, ResponseService>();
 builder.Services.AddScoped<ITokenService, TokenService>();
-
+builder.Services.AddScoped<IUploadedFileRepositry, UploadedFileRepositry>();
 
 #endregion
 

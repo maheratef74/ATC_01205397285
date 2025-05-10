@@ -17,5 +17,36 @@
   "EmailAlreadyExists": "البريد الإلكتروني موجود بالفعل",
   
   "InvalidCredentials" : "البريد الالكتروني او كلمة السر خطاء",
-  "LoginSuccessful" : "تسجيل دخول ناجح"
+  "LoginSuccessful" : "تسجيل دخول ناجح",
+
+  "EventName": "اسم الحدث مطلوب",
+  "EventNameMaxLength": "يجب ألا يزيد اسم الحدث عن 100 حرف",
+  "Description": "الوصف مطلوب",
+  "DescriptionMaxLength": "يجب ألا يزيد الوصف عن 500 حرف",
+  "Category": "الفئة مطلوبة",
+  "StartDate": "تاريخ البدء مطلوب",
+  "StartDateInvalid": "تنسيق تاريخ البدء غير صالح",
+  "EndDate": "تاريخ الانتهاء مطلوب",
+  "EndDateInvalid": "تنسيق تاريخ الانتهاء غير صالح",
+  "Venue": "المكان مطلوب",
+  "VenueMaxLength": "يجب ألا يزيد المكان عن 200 حرف",
+  "Price": "السعر مطلوب",
+  "PriceInvalid": "يجب أن يكون السعر رقماً موجباً",
+  "ImageUrl": "رابط الصورة مطلوب",
+  "ImageUrlInvalid": "رابط الصورة غير صالح",
+
+  "EventCreatedSuccessfully": "تم إنشاء الحدث بنجاح",
+  "FailedToCreateEvent": "فشل في إنشاء الحدث",
+
+  "EventNotFound": "فشل في العثور على الحدث",
+  "EventUpdatedSuccessfully": "تم تحديث الحدث بنجاح",
+
+  "EventDeletedSuccessfully": "تم حذف الحدث بنجاح",
+
+  "FileRequired": "الملف مطلوب.",
+  "FileUploadTypeInvalid": "نوع الملف غير صالح.",
+
+  "InvalidFileName": "اسم الملف غير صالح.",
+  "FileMetadataNotFound": "بيانات الملف غير موجودة.",
+  "FileNotFoundOnDisk": "الملف غير موجود على الخادم."
 }

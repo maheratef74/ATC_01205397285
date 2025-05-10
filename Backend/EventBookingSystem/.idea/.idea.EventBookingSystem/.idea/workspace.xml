@@ -8,7 +8,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c2749b1-bb74-4d43-9999-9213b06920ac" name="Changes" comment="" />
+    <list default="true" id="5c2749b1-bb74-4d43-9999-9213b06920ac" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/DataAccessLayer/Repositories/UploadedFile/IUploadedFileRepositry.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataAccessLayer/Repositories/UploadedFile/UploadedFileRepositry.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/EventController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/UploadController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EventBookingSystem.API/Dtos/EventDto/EventExtensionMethold.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EventBookingSystem.API/Models/Event/EventRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EventBookingSystem.API/Models/Upload/UploadFileRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.EventBookingSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EventBookingSystem/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessLogicLayer/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessLogicLayer/Services/FileService/FileService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessLogicLayer/Services/FileService/FileService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessLogicLayer/Services/FileService/IFileService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessLogicLayer/Services/FileService/IFileService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccessLayer/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccessLayer/DbContext/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/DbContext/AppDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccessLayer/Entities/Event.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/Entities/Event.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccessLayer/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/Migrations/AppDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccessLayer/Repositories/Event/EventRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/Repositories/Event/EventRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccessLayer/Repositories/Event/IEventRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/Repositories/Event/IEventRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/EventBookingSystem.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/EventBookingSystem.API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Resources/ar-EG.json" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Resources/ar-EG.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Resources/en-US.json" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Resources/en-US.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,7 +64,9 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c69576b4a074ad2839225611609498e344b7e2819997af48dbb2d2f8257f3/EntityFrameworkQueryableExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file:///usr/lib/dotnet/sdk/8.0.115/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -55,7 +80,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.EventBookingSystem.API: http.executor&quot;: &quot;Debug&quot;,
+    &quot;.NET Launch Settings Profile.EventBookingSystem.API: http.executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
@@ -65,6 +90,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -112,13 +138,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1746861911199</updated>
-      <workItem from="1746861913024" duration="17843000" />
+      <workItem from="1746861913024" duration="29334000" />
+      <workItem from="1746896671069" duration="5313000" />
+      <workItem from="1746902789201" duration="441000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
@@ -140,13 +169,13 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/EventBookingSystem.API/Controllers/AuthenticationController.cs</url>
-          <line>35</line>
+          <line>36</line>
           <properties documentPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/AuthenticationController.cs" containingFunctionPresentation="Method 'Register'">
             <startOffsets>
-              <option value="1416" />
+              <option value="1446" />
             </startOffsets>
             <endOffsets>
-              <option value="1417" />
+              <option value="1447" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="4" />
@@ -165,17 +194,43 @@
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/EventBookingSystem.API/Controllers/AuthenticationController.cs</url>
-          <line>56</line>
-          <properties documentPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/AuthenticationController.cs" containingFunctionPresentation="Method 'Login'">
+          <url>file://$PROJECT_DIR$/EventBookingSystem.API/Controllers/EventController.cs</url>
+          <line>32</line>
+          <properties documentPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/EventController.cs" containingFunctionPresentation="Method 'AddEvent'">
             <startOffsets>
-              <option value="2201" />
+              <option value="1176" />
             </startOffsets>
             <endOffsets>
-              <option value="2263" />
+              <option value="1177" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="7" />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/EventBookingSystem.API/Controllers/UploadController.cs</url>
+          <line>45</line>
+          <properties documentPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/UploadController.cs" containingFunctionPresentation="Method 'UploadFile'">
+            <startOffsets>
+              <option value="1763" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1764" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/BusinessLogicLayer/Services/FileService/FileService.cs</url>
+          <line>22</line>
+          <properties documentPath="$PROJECT_DIR$/BusinessLogicLayer/Services/FileService/FileService.cs" containingFunctionPresentation="Method 'UploadFile'">
+            <startOffsets>
+              <option value="745" />
+            </startOffsets>
+            <endOffsets>
+              <option value="789" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

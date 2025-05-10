@@ -28,4 +28,5 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<User> Users { get; set; } = null!;
     public DbSet<Event> Events { get; set; } = null!;
     public DbSet<Booking> Bookings { get; set; } = null!;
+    public DbSet<UploadedFile> UploadedFiles { get; set; } = null!;
 }
