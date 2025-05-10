@@ -11,18 +11,22 @@ jobs:
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.0
-          
+
       - name: Install dependencies
         run: dotnet restore
+        working-directory: ./Backend
         
       - name: Build
         run: dotnet build --configuration Release --no-restore
+        working-directory: ./Backend
 
       - name: Publish
-        run: dotnet publish --configuration Release --output ./publish --runtime win-x86 
-        
+        run: dotnet publish --configuration Release --output ./publish --runtime win-x86
+        working-directory: ./Backend
+
       - name: Test with .NET
         run: dotnet test
+        working-directory: ./Backend
 
       - name: Deploy to MonsterASP.NET via WebDeploy
         uses: rasmusbuchholdt/simply-web-deploy@2.1.0
@@ -31,3 +35,4 @@ jobs:
           server-computer-name: ${{ secrets.SERVER_COMPUTER_NAME }}
           server-username: ${{ secrets.SERVER_USERNAME }}
           server-password: ${{ secrets.SERVER_PASSWORD }}
+          source-path: Backend/publish
