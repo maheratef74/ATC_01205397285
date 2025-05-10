@@ -22,7 +22,7 @@ jobs:
 
       - name: Publish
         run: dotnet publish --configuration Release --output ./publish --runtime win-x86
-        working-directory: ./Backend
+        working-directory: ./Backend/EventBookingSystem
 
       - name: Test with .NET
         run: dotnet test
