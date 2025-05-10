@@ -1,3 +1,5 @@
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using DataAccessLayer.Entities;
 using DataAccessLayer.Enums;

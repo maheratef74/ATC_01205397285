@@ -1,4 +1,5 @@
 using System.Net;
+using System.Threading.Tasks;
 using BusinessLogicLayer.Services.ResponseService;
 using BusinessLogicLayer.Services.TokenService;
 using BusinessLogicLayer.Shared;
@@ -61,7 +62,7 @@ public class AuthenticationController : ControllerBase
         }
         var token = await _tokenService.GenerateToken(user , request.RememberMe);
 
-        return _responseService.CreateResponse(Result<LoginDto>.Success(user.ToLoginDto(), token));
+        return _responseService.CreateResponse(Result<LoginDto>.Success(user.ToLoginDto(), token , HttpStatusCode.OK));
      }
     
 }

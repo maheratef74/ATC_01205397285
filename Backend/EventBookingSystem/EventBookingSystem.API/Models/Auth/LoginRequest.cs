@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using EventBookingSystem.API.Dtos.AuthDtos;
 
 namespace EventBookingSystem.API.Models.Auth;
 
@@ -13,3 +14,4 @@ public class LoginRequest
 
     public bool RememberMe = true;
 }
+
