@@ -14,11 +14,11 @@ jobs:
 
       - name: Install dependencies
         run: dotnet restore
-        working-directory: ./Backend
+        working-directory: ./Backend/EventBookingSystem
         
       - name: Build
         run: dotnet build --configuration Release --no-restore
-        working-directory: ./Backend
+        working-directory: ./Backend/EventBookingSystem
 
       - name: Publish
         run: dotnet publish --configuration Release --output ./publish --runtime win-x86
@@ -26,7 +26,7 @@ jobs:
 
       - name: Test with .NET
         run: dotnet test
-        working-directory: ./Backend
+        working-directory: ./Backend/EventBookingSystem
 
       - name: Deploy to MonsterASP.NET via WebDeploy
         uses: rasmusbuchholdt/simply-web-deploy@2.1.0
@@ -35,4 +35,4 @@ jobs:
           server-computer-name: ${{ secrets.SERVER_COMPUTER_NAME }}
           server-username: ${{ secrets.SERVER_USERNAME }}
           server-password: ${{ secrets.SERVER_PASSWORD }}
-          source-path: Backend/publish
+          source-path: Backend/EventBookingSystem/publish
