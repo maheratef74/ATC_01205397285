@@ -1,0 +1,21 @@
+{
+  "Name": "الاسم مطلوب",
+  "Email": "البريد الإلكتروني مطلوب",
+  "EmailInvalid": "عنوان البريد الإلكتروني غير صالح",
+  "Phone": "رقم الهاتف مطلوب",
+  "PhoneInvalid": "رقم الهاتف غير صالح",
+  "DateOfBirth": "تاريخ الميلاد مطلوب",
+  "Address": "العنوان مطلوب",
+  "Photo": "الصورة",
+  "Password": "كلمة المرور مطلوبة",
+  "PasswordLength": "يجب أن تكون كلمة المرور على الأقل 6 أحرف",
+  "Gender": "الجنس مطلوب",
+
+
+  "UserCreatedSuccessfully": "تم إنشاء المستخدم بنجاح",
+  "FailedToCreateUser": "فشل في إنشاء المستخدم",
+  "EmailAlreadyExists": "البريد الإلكتروني موجود بالفعل",
+  
+  "InvalidCredentials" : "البريد الالكتروني او كلمة السر خطاء",
+  "LoginSuccessful" : "تسجيل دخول ناجح"
+}

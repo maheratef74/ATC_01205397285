@@ -1,0 +1,20 @@
+{
+  "Name": "Name is required",
+  "Email": "Email is required",
+  "EmailInvalid": "Invalid email address",
+  "Phone": "Phone number is required",
+  "PhoneInvalid": "Invalid phone number",
+  "DateOfBirth": "Date of birth is required",
+  "Address": "Address is required",
+  "Photo": "Photo",
+  "Password": "Password is required",
+  "PasswordLength": "Password must be at least 6 characters long",
+  "Gender": "Gender is required",
+  
+  "UserCreatedSuccessfully": "User created successfully",
+  "FailedToCreateUser": "Failed to create user",
+  "EmailAlreadyExists": "Email already exists",
+  
+  "InvalidCredentials" : "Invalid email or password",
+  "LoginSuccessful" : "Login Successful"
+}

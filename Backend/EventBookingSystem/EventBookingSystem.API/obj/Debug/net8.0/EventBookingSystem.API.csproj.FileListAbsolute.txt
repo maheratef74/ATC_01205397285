@@ -93,3 +93,5 @@
 /home/maher/RiderProjects/ATC_01205397285/Backend/EventBookingSystem/EventBookingSystem.API/obj/Debug/net8.0/EventBookingSystem.API.pdb
 /home/maher/RiderProjects/ATC_01205397285/Backend/EventBookingSystem/EventBookingSystem.API/obj/Debug/net8.0/EventBookingSystem.API.genruntimeconfig.cache
 /home/maher/RiderProjects/ATC_01205397285/Backend/EventBookingSystem/EventBookingSystem.API/obj/Debug/net8.0/ref/EventBookingSystem.API.dll
+/home/maher/RiderProjects/ATC_01205397285/Backend/EventBookingSystem/EventBookingSystem.API/bin/Debug/net8.0/Resources/ar-EG.json
+/home/maher/RiderProjects/ATC_01205397285/Backend/EventBookingSystem/EventBookingSystem.API/bin/Debug/net8.0/Resources/en-US.json
