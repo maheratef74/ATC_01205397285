@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBookingSystem.API", "EventBookingSystem.API\EventBookingSystem.API.csproj", "{A8DB54CC-F598-40B9-BEA1-852006318A71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{5A370092-AEAD-4127-B787-6893D835BEE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogicLayer", "BusinessLogicLayer\BusinessLogicLayer.csproj", "{217FBC0C-C95B-40D4-A66F-1D24E2998905}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8DB54CC-F598-40B9-BEA1-852006318A71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8DB54CC-F598-40B9-BEA1-852006318A71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8DB54CC-F598-40B9-BEA1-852006318A71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8DB54CC-F598-40B9-BEA1-852006318A71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A370092-AEAD-4127-B787-6893D835BEE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A370092-AEAD-4127-B787-6893D835BEE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A370092-AEAD-4127-B787-6893D835BEE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A370092-AEAD-4127-B787-6893D835BEE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{217FBC0C-C95B-40D4-A66F-1D24E2998905}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{217FBC0C-C95B-40D4-A66F-1D24E2998905}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{217FBC0C-C95B-40D4-A66F-1D24E2998905}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{217FBC0C-C95B-40D4-A66F-1D24E2998905}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

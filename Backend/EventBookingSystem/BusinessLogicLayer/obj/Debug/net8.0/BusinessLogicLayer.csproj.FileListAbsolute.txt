@@ -1,0 +1,16 @@
+/home/maher/RiderProjects/ATC_01205397285/Backend/EventBookingSystem/BusinessLogicLayer/bin/Debug/net8.0/BusinessLogicLayer.deps.json
+/home/maher/RiderProjects/ATC_01205397285/Backend/EventBookingSystem/BusinessLogicLayer/bin/Debug/net8.0/BusinessLogicLayer.dll
+/home/maher/RiderProjects/ATC_01205397285/Backend/EventBookingSystem/BusinessLogicLayer/bin/Debug/net8.0/BusinessLogicLayer.pdb
+/home/maher/RiderProjects/ATC_01205397285/Backend/EventBookingSystem/BusinessLogicLayer/bin/Debug/net8.0/DataAccessLayer.dll
+/home/maher/RiderProjects/ATC_01205397285/Backend/EventBookingSystem/BusinessLogicLayer/bin/Debug/net8.0/DataAccessLayer.pdb
+/home/maher/RiderProjects/ATC_01205397285/Backend/EventBookingSystem/BusinessLogicLayer/obj/Debug/net8.0/BusinessLogicLayer.csproj.AssemblyReference.cache
+/home/maher/RiderProjects/ATC_01205397285/Backend/EventBookingSystem/BusinessLogicLayer/obj/Debug/net8.0/BusinessLogicLayer.GeneratedMSBuildEditorConfig.editorconfig
+/home/maher/RiderProjects/ATC_01205397285/Backend/EventBookingSystem/BusinessLogicLayer/obj/Debug/net8.0/BusinessLogicLayer.AssemblyInfoInputs.cache
+/home/maher/RiderProjects/ATC_01205397285/Backend/EventBookingSystem/BusinessLogicLayer/obj/Debug/net8.0/BusinessLogicLayer.AssemblyInfo.cs
+/home/maher/RiderProjects/ATC_01205397285/Backend/EventBookingSystem/BusinessLogicLayer/obj/Debug/net8.0/BusinessLogicLayer.csproj.CoreCompileInputs.cache
+/home/maher/RiderProjects/ATC_01205397285/Backend/EventBookingSystem/BusinessLogicLayer/obj/Debug/net8.0/BusinessLogicLayer.sourcelink.json
+/home/maher/RiderProjects/ATC_01205397285/Backend/EventBookingSystem/BusinessLogicLayer/obj/Debug/net8.0/BusinessLogicLayer.csproj.CopyComplete
+/home/maher/RiderProjects/ATC_01205397285/Backend/EventBookingSystem/BusinessLogicLayer/obj/Debug/net8.0/BusinessLogicLayer.dll
+/home/maher/RiderProjects/ATC_01205397285/Backend/EventBookingSystem/BusinessLogicLayer/obj/Debug/net8.0/refint/BusinessLogicLayer.dll
+/home/maher/RiderProjects/ATC_01205397285/Backend/EventBookingSystem/BusinessLogicLayer/obj/Debug/net8.0/BusinessLogicLayer.pdb
+/home/maher/RiderProjects/ATC_01205397285/Backend/EventBookingSystem/BusinessLogicLayer/obj/Debug/net8.0/ref/BusinessLogicLayer.dll
