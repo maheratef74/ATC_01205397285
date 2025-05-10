@@ -62,6 +62,6 @@ public class AuthenticationController : ControllerBase
         var token = await _tokenService.GenerateToken(user , request.RememberMe);
 
         return _responseService.CreateResponse(Result<LoginDto>.Success(user.ToLoginDto(), token));
-    }
+     }
     
 }
