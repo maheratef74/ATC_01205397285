@@ -8,58 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c2749b1-bb74-4d43-9999-9213b06920ac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/AuthenticationController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EventBookingSystem.API/Dtos/AuthDtos/AuthExtensionMethold.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EventBookingSystem.API/Dtos/AuthDtos/LoginDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EventBookingSystem.API/Models/Auth/LoginRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EventBookingSystem.API/Models/Auth/RegisterRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EventBookingSystem.API/Resources/ar-EG.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EventBookingSystem.API/Resources/en-US.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.EventBookingSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EventBookingSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessLogicLayer/bin/Debug/net8.0/BusinessLogicLayer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessLogicLayer/bin/Debug/net8.0/BusinessLogicLayer.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessLogicLayer/bin/Debug/net8.0/BusinessLogicLayer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessLogicLayer/bin/Debug/net8.0/BusinessLogicLayer.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessLogicLayer/bin/Debug/net8.0/DataAccessLayer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessLogicLayer/bin/Debug/net8.0/DataAccessLayer.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessLogicLayer/bin/Debug/net8.0/DataAccessLayer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessLogicLayer/bin/Debug/net8.0/DataAccessLayer.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessLogicLayer/obj/Debug/net8.0/BusinessLogicLayer.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessLogicLayer/obj/Debug/net8.0/BusinessLogicLayer.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessLogicLayer/obj/Debug/net8.0/BusinessLogicLayer.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessLogicLayer/obj/Debug/net8.0/BusinessLogicLayer.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessLogicLayer/obj/Debug/net8.0/BusinessLogicLayer.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessLogicLayer/obj/Debug/net8.0/BusinessLogicLayer.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessLogicLayer/obj/Debug/net8.0/BusinessLogicLayer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessLogicLayer/obj/Debug/net8.0/BusinessLogicLayer.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessLogicLayer/obj/Debug/net8.0/BusinessLogicLayer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessLogicLayer/obj/Debug/net8.0/BusinessLogicLayer.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessLogicLayer/obj/Debug/net8.0/BusinessLogicLayer.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessLogicLayer/obj/Debug/net8.0/BusinessLogicLayer.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessLogicLayer/obj/Debug/net8.0/ref/BusinessLogicLayer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessLogicLayer/obj/Debug/net8.0/ref/BusinessLogicLayer.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessLogicLayer/obj/Debug/net8.0/refint/BusinessLogicLayer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessLogicLayer/obj/Debug/net8.0/refint/BusinessLogicLayer.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccessLayer/Repositories/User/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/Repositories/User/IUserRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccessLayer/Repositories/User/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/Repositories/User/UserRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccessLayer/bin/Debug/net8.0/DataAccessLayer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/bin/Debug/net8.0/DataAccessLayer.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccessLayer/bin/Debug/net8.0/DataAccessLayer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/bin/Debug/net8.0/DataAccessLayer.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccessLayer/obj/Debug/net8.0/DataAccessLayer.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/obj/Debug/net8.0/DataAccessLayer.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccessLayer/obj/Debug/net8.0/DataAccessLayer.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/obj/Debug/net8.0/DataAccessLayer.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccessLayer/obj/Debug/net8.0/DataAccessLayer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/obj/Debug/net8.0/DataAccessLayer.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccessLayer/obj/Debug/net8.0/DataAccessLayer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/obj/Debug/net8.0/DataAccessLayer.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccessLayer/obj/Debug/net8.0/DataAccessLayer.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/obj/Debug/net8.0/DataAccessLayer.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccessLayer/obj/Debug/net8.0/ref/DataAccessLayer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/obj/Debug/net8.0/ref/DataAccessLayer.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccessLayer/obj/Debug/net8.0/refint/DataAccessLayer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/obj/Debug/net8.0/refint/DataAccessLayer.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/EventBookingSystem.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/EventBookingSystem.API.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/bin/Debug/net8.0/BusinessLogicLayer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/bin/Debug/net8.0/BusinessLogicLayer.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/bin/Debug/net8.0/BusinessLogicLayer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/bin/Debug/net8.0/BusinessLogicLayer.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/bin/Debug/net8.0/DataAccessLayer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/bin/Debug/net8.0/DataAccessLayer.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/bin/Debug/net8.0/DataAccessLayer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/bin/Debug/net8.0/DataAccessLayer.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/bin/Debug/net8.0/EventBookingSystem.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/bin/Debug/net8.0/EventBookingSystem.API.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/bin/Debug/net8.0/EventBookingSystem.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/bin/Debug/net8.0/EventBookingSystem.API.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/bin/Debug/net8.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/bin/Debug/net8.0/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/obj/Debug/net8.0/EventBookingSystem.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/obj/Debug/net8.0/EventBookingSystem.API.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/obj/Debug/net8.0/EventBookingSystem.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/obj/Debug/net8.0/EventBookingSystem.API.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/obj/Debug/net8.0/EventBookingSystem.API.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/obj/Debug/net8.0/EventBookingSystem.API.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/obj/Debug/net8.0/EventBookingSystem.API.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/obj/Debug/net8.0/EventBookingSystem.API.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/obj/Debug/net8.0/EventBookingSystem.API.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/obj/Debug/net8.0/EventBookingSystem.API.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/obj/Debug/net8.0/EventBookingSystem.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/obj/Debug/net8.0/EventBookingSystem.API.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/obj/Debug/net8.0/EventBookingSystem.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/obj/Debug/net8.0/EventBookingSystem.API.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/obj/Debug/net8.0/EventBookingSystem.API.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/obj/Debug/net8.0/EventBookingSystem.API.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/obj/Debug/net8.0/ref/EventBookingSystem.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/obj/Debug/net8.0/ref/EventBookingSystem.API.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/obj/Debug/net8.0/refint/EventBookingSystem.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/obj/Debug/net8.0/refint/EventBookingSystem.API.dll" afterDir="false" />
-    </list>
+    <list default="true" id="5c2749b1-bb74-4d43-9999-9213b06920ac" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,24 +27,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "maheratef74"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;maheratef74&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/maheratef74/ATC_01205397285",
-    "accountId": "0c16f20a-aea9-4c8d-929b-5146cb2d5087"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/maheratef74/ATC_01205397285&quot;,
+    &quot;accountId&quot;: &quot;0c16f20a-aea9-4c8d-929b-5146cb2d5087&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c69576b4a074ad2839225611609498e344b7e2819997af48dbb2d2f8257f3/EntityFrameworkQueryableExtensions.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2wtXazl0KslzZQwWu0bQ33j3zj8" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -104,26 +53,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.EventBookingSystem.API: http.executor": "Debug",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.EventBookingSystem.API: http.executor&quot;: &quot;Debug&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "GitIgnore"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;GitIgnore&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.EventBookingSystem.API: http">
     <configuration name="EventBookingSystem.API: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/EventBookingSystem.API/EventBookingSystem.API.csproj" />
@@ -163,7 +112,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1746861911199</updated>
-      <workItem from="1746861913024" duration="17465000" />
+      <workItem from="1746861913024" duration="17843000" />
     </task>
     <servers />
   </component>
