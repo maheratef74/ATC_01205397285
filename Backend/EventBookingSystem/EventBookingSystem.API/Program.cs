@@ -42,12 +42,13 @@ var Configuration = builder.Configuration;
 // Add CORS services
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowReactApp", builder =>
-    {
-        builder.AllowAnyOrigin()
-            .AllowAnyMethod()
-            .AllowAnyHeader();
-    });
+    options.AddPolicy("AllowAll",
+        builder =>
+        {
+            builder.AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader();
+        });
 });
 
 #region Configure Swagger
@@ -205,11 +206,10 @@ catch (Exception ex)
     app.UseSwaggerUI();
 //}
 
-
 app.UseRequestLocalization(localizationOptions);
 
 app.UseHttpsRedirection();
-app.UseCors("AllowReactApp");
+app.UseCors("AllowAll");
 app.UseAuthentication();
 app.UseAuthorization();
 
