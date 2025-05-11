@@ -10,46 +10,33 @@ on:
 jobs:
   build:
     name: Build and Analyze with SonarCloud
-    runs-on: windows-latest  # Use a Windows runner
+    runs-on: windows-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Ensure the repository is fully cloned for proper analysis
+          fetch-depth: 0  # Required for full SonarCloud analysis
 
-      - name: Set up JDK 17 (required for SonarCloud scanner)
+      - name: Set up JDK 17 (required for SonarCloud)
         uses: actions/setup-java@v4
         with:
           java-version: 17
-          distribution: 'zulu'  # Use Zulu OpenJDK distribution
+          distribution: 'zulu'
 
-      - name: Cache SonarQube Cloud scanner
-        id: cache-sonar-scanner
-        uses: actions/cache@v4
-        with:
-          path: .\.sonar\scanner  # Cache the SonarQube scanner directory
-          key: ${{ runner.os }}-sonar-scanner
-          restore-keys: ${{ runner.os }}-sonar-scanner
+      - name: Install SonarCloud Scanner globally
+        run: dotnet tool install --global dotnet-sonarscanner
 
-      - name: Install SonarQube scanner (if not cached)
-        if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
-        run: |
-          New-Item -Path .\.sonar\scanner -ItemType Directory
-          dotnet tool install dotnet-sonarscanner --tool-path .\.sonar\scanner
+      - name: Add dotnet tools to PATH
+        run: echo "${HOME}\.dotnet\tools" | Out-File -Append -Encoding ascii $env:GITHUB_PATH
 
       - name: Build and analyze with SonarCloud
         working-directory: ./Backend/EventBookingSystem
         env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  # Use the SonarCloud token from GitHub secrets
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
-          # Start SonarQube scanner with the project key and token
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"maheratef74_ATC_01205397285" /o:"maheratef74" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /s:"./Backend/EventBookingSystem/EventBookingSystem.sln"
-          
-          # Restore dependencies, build the project, and run tests
-          dotnet restore
-          dotnet build --configuration Release
-          dotnet test --configuration Release  # Ensure unit tests are executed
-
-          # End the SonarQube scanner analysis
-          .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
+          dotnet-sonarscanner begin /k:"maheratef74_ATC_01205397285" /o:"maheratef74" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+          dotnet restore EventBookingSystem.sln
+          dotnet build EventBookingSystem.sln --configuration Release
+          dotnet test EventBookingSystem.sln --configuration Release
+          dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
