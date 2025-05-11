@@ -1,0 +1,54 @@
+name: SonarCloud Analysis for .NET
+
+on:
+  push:
+    branches:
+      - main  # Trigger this workflow for pushes to the main branch
+  pull_request:
+    types: [opened, synchronize, reopened]  # Trigger for pull request events
+
+jobs:
+  build:
+    name: Build and Analyze with SonarCloud
+    runs-on: windows-latest  # Use a Windows runner
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Ensure the repository is fully cloned for proper analysis
+
+      - name: Set up JDK 17 (required for SonarCloud scanner)
+        uses: actions/setup-java@v4
+        with:
+          java-version: 17
+          distribution: 'zulu'  # Use Zulu OpenJDK distribution
+
+      - name: Cache SonarQube Cloud scanner
+        id: cache-sonar-scanner
+        uses: actions/cache@v4
+        with:
+          path: .\.sonar\scanner  # Cache the SonarQube scanner directory
+          key: ${{ runner.os }}-sonar-scanner
+          restore-keys: ${{ runner.os }}-sonar-scanner
+
+      - name: Install SonarQube scanner (if not cached)
+        if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
+        run: |
+          New-Item -Path .\.sonar\scanner -ItemType Directory
+          dotnet tool install dotnet-sonarscanner --tool-path .\.sonar\scanner
+
+      - name: Build and analyze with SonarCloud
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  # Use the SonarCloud token from GitHub secrets
+        run: |
+          # Start SonarQube scanner with the project key and token
+          .\.sonar\scanner\dotnet-sonarscanner begin /k:"maheratef74_ATC_01205397285" /o:"maheratef74" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+          
+          # Restore dependencies, build the project, and run tests
+          dotnet restore
+          dotnet build --configuration Release
+          dotnet test --configuration Release  # Ensure unit tests are executed
+
+          # End the SonarQube scanner analysis
+          .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
