@@ -39,6 +39,7 @@ jobs:
           dotnet tool install dotnet-sonarscanner --tool-path .\.sonar\scanner
 
       - name: Build and analyze with SonarCloud
+        working-directory: ./Backend/EventBookingSystem
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  # Use the SonarCloud token from GitHub secrets
         run: |
