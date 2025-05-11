@@ -9,24 +9,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c2749b1-bb74-4d43-9999-9213b06920ac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BusinessLogicLayer/Jobs/ExpiredEventCleanupService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BusinessLogicLayer/Services/BookingService/BookingService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BusinessLogicLayer/Services/BookingService/IBookingService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BusinessLogicLayer/Services/EmailService/EmailService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BusinessLogicLayer/Services/EmailService/IEmailService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/BookingController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EventBookingSystem.API/Dtos/EventDto/EventDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EventBookingSystem.API/SwaggerUI/AddLanguageHeaderParameter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EventBookingSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EventBookingSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessLogicLayer/BusinessLogicLayer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessLogicLayer/BusinessLogicLayer.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccessLayer/DbContext/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/DbContext/AppDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccessLayer/Entities/Booking.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/Entities/Booking.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessLogicLayer/Services/BookingService/BookingService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessLogicLayer/Services/BookingService/BookingService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessLogicLayer/Shared/PagedResult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/Shared/PagedResult.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessLogicLayer/Shared/Result.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/Shared/Result.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccessLayer/Entities/Event.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/Entities/Event.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccessLayer/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/Migrations/AppDbContextModelSnapshot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccessLayer/Repositories/Booking/BookingRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/Repositories/Booking/BookingRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccessLayer/Repositories/Booking/IBookingRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/Repositories/Booking/IBookingRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccessLayer/Repositories/Event/EventRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/Repositories/Event/EventRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccessLayer/Repositories/Event/IEventRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/Repositories/Event/IEventRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/EventController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/EventController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Dtos/EventDto/EventExtensionMethold.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Dtos/EventDto/EventExtensionMethold.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/EventBookingSystem.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/EventBookingSystem.API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/BookingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/BookingController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Resources/ar-EG.json" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Resources/ar-EG.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Resources/en-US.json" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Resources/en-US.json" afterDir="false" />
@@ -78,27 +72,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.EventBookingSystem.API: http.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.EventBookingSystem.API: http.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "GitIgnore"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;GitIgnore&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.EventBookingSystem.API: http">
     <configuration name="EventBookingSystem.API: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/EventBookingSystem.API/EventBookingSystem.API.csproj" />
@@ -141,7 +135,8 @@
       <workItem from="1746861913024" duration="29334000" />
       <workItem from="1746896671069" duration="5313000" />
       <workItem from="1746902789201" duration="441000" />
-      <workItem from="1746911076941" duration="14469000" />
+      <workItem from="1746911076941" duration="16215000" />
+      <workItem from="1746952205993" duration="10797000" />
     </task>
     <servers />
   </component>
@@ -235,16 +230,29 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/DataAccessLayer/Repositories/Booking/BookingRepository.cs</url>
-          <line>67</line>
+          <line>68</line>
           <properties documentPath="$PROJECT_DIR$/DataAccessLayer/Repositories/Booking/BookingRepository.cs" containingFunctionPresentation="Method 'GetBookedEventIdsByUserAsync'">
             <startOffsets>
-              <option value="2033" />
+              <option value="2066" />
             </startOffsets>
             <endOffsets>
-              <option value="2034" />
+              <option value="2067" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/BusinessLogicLayer/Services/BookingService/BookingService.cs</url>
+          <line>31</line>
+          <properties documentPath="$PROJECT_DIR$/BusinessLogicLayer/Services/BookingService/BookingService.cs" containingFunctionPresentation="Method 'CreateBookingAsync'">
+            <startOffsets>
+              <option value="1293" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1294" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

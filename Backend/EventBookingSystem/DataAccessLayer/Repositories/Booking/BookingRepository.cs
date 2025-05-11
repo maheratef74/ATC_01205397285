@@ -1,3 +1,4 @@
+using BusinessLogicLayer.Shared;
 using DataAccessLayer.DbContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Client;
@@ -71,7 +72,30 @@ public class BookingRepository : IBookingRepository
             .Select(b => b.EventId)
             .ToListAsync();
     }
-    
+
+    public async Task<PagedResult<Entities.Booking>> GetUpcomingEventBookingsAsync(int page, int pageSize)
+    {
+        var query = _dbContext.Bookings
+            .Include(b => b.Event)
+            .Include(b => b.User)
+            .Where(b => b.Event.StartDate > DateTime.UtcNow)
+            .OrderBy(b => b.Event.StartDate);
+
+        var totalItems = await query.CountAsync();
+        var items = await query
+            .Skip((page - 1) * pageSize)
+            .Take(pageSize)
+            .ToListAsync();
+
+        return new PagedResult<Entities.Booking>
+        {
+            TotalItems = totalItems,
+            Page = page,
+            PageSize = pageSize,
+            Items = items
+        };
+    }
+
     public async Task SaveChangesAsync()
     {
         await _dbContext.SaveChangesAsync();

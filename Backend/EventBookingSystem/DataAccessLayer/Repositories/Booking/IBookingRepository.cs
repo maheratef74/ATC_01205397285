@@ -1,3 +1,5 @@
+using BusinessLogicLayer.Shared;
+
 namespace DataAccessLayer.Repositories.Booking;
 using DataAccessLayer.Entities;
 public interface IBookingRepository
@@ -10,5 +12,6 @@ public interface IBookingRepository
     Task DeleteAsync(Guid bookingId);
     Task<bool> AlreadyBookedAsync(string userId, Guid eventId);
     Task<List<Guid>> GetBookedEventIdsByUserAsync(string userId);
+    Task<PagedResult<Booking>> GetUpcomingEventBookingsAsync(int page, int pageSize);
     Task SaveChangesAsync();
 }

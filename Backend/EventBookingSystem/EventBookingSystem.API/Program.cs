@@ -16,6 +16,7 @@ using DataAccessLayer.Repositories.Booking;
 using DataAccessLayer.Repositories.Event;
 using DataAccessLayer.Repositories.UploadedFile;
 using DataAccessLayer.Repositories.User;
+using EventBookingSystem.API.SwaggerUI;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
@@ -26,6 +27,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -79,6 +81,7 @@ builder.Services.AddSwaggerGen(c =>
             new List<string>()
         }
     });
+    c.OperationFilter<AddLanguageHeaderParameter>();
 });
 
 #endregion
@@ -161,13 +164,21 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
         new CultureInfo("ar-EG"),
         new CultureInfo("en-US")
     };
-    options.DefaultRequestCulture = new RequestCulture(culture: supportedCultures[0]);
+    options.DefaultRequestCulture = new RequestCulture("ar-EG");
     options.SupportedCultures = supportedCultures;
+    options.SupportedUICultures = supportedCultures;
+    
+    options.RequestCultureProviders.Insert(0, new AcceptLanguageHeaderRequestCultureProvider());
 });
 
 #endregion
 
+
 var app = builder.Build();
+
+// Enable localization middleware
+var localizationOptions = app.Services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value;
+app.UseRequestLocalization(localizationOptions);
 
 #region Seeder
 
@@ -195,10 +206,7 @@ catch (Exception ex)
     app.UseSwaggerUI();
 //}
 
-var supportedCultures = new[] { "ar-EG", "en-US" };
-var localizationOptions = new RequestLocalizationOptions()
-    .SetDefaultCulture(supportedCultures[0])
-    .AddSupportedCultures(supportedCultures);
+
 
 app.UseCors("AllowAll");
 

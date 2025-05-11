@@ -13,5 +13,6 @@ public interface IEventRepository
     Task<bool> UpdateAsync(Event evt);
     Task DeleteAsync(Guid eventId);
     Task<int> DeleteExpiredEventsAsync();
+    Task IncrementTicketsBookedAsync(Guid eventId);
     Task SaveChangesAsync();
 }

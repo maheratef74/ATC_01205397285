@@ -92,6 +92,16 @@ public class EventRepository : IEventRepository
         return 0;
     }
 
+    public async Task IncrementTicketsBookedAsync(Guid eventId)
+    {
+        var evt = await _dbContext.Events.FindAsync(eventId);
+        if (evt != null)
+        {
+            evt.TicketsBooked++;
+            _dbContext.Events.Update(evt);
+        }
+    }
+
     public async Task SaveChangesAsync()
     {
         await _dbContext.SaveChangesAsync();

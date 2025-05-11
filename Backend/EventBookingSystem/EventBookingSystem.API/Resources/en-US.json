@@ -56,7 +56,7 @@
   
   "EmailBookingSubject": "Booking Confirmation",
   "EmailBookingHeader": "🎉 Booking Confirmation",
-  "EmailGreeting": "Congratulations! You have successfully booked the event.",
+  "EmailGreeting": "Congratulations {0}! You have successfully booked the event.",
   "EmailEventDetails": "📅 Event Details",
   "EmailEventName": "Event Name",
   "EmailStartTime": "Start Time",
