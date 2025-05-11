@@ -43,7 +43,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  # Use the SonarCloud token from GitHub secrets
         run: |
           # Start SonarQube scanner with the project key and token
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"maheratef74_ATC_01205397285" /o:"maheratef74" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+          .\.sonar\scanner\dotnet-sonarscanner begin /k:"maheratef74_ATC_01205397285" /o:"maheratef74" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /s:"./Backend/EventBookingSystem/EventBookingSystem.sln"
           
           # Restore dependencies, build the project, and run tests
           dotnet restore
