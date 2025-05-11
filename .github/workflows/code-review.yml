@@ -1,0 +1,42 @@
+name: SonarCloud Analysis for .NET
+
+on:
+  push:
+    branches:
+      - main  # Trigger this workflow for pushes to the main branch
+  pull_request:
+    types: [opened, synchronize, reopened]  # Trigger for pull request events
+
+jobs:
+  build:
+    name: Build and Analyze with SonarCloud
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Required for full SonarCloud analysis
+
+      - name: Set up JDK 17 (required for SonarCloud)
+        uses: actions/setup-java@v4
+        with:
+          java-version: 17
+          distribution: 'zulu'
+
+      - name: Install SonarCloud Scanner globally
+        run: dotnet tool install --global dotnet-sonarscanner
+
+      - name: Add dotnet tools to PATH
+        run: echo "${HOME}\.dotnet\tools" | Out-File -Append -Encoding ascii $env:GITHUB_PATH
+
+      - name: Build and analyze with SonarCloud
+        working-directory: ./Backend/EventBookingSystem
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: |
+          dotnet-sonarscanner begin /k:"maheratef74_ATC_01205397285" /o:"maheratef74" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+          dotnet restore EventBookingSystem.sln
+          dotnet build EventBookingSystem.sln --configuration Release
+          dotnet test EventBookingSystem.sln --configuration Release
+          dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
