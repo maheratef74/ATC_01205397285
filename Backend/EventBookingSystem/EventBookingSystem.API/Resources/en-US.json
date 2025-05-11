@@ -48,5 +48,19 @@
 
   "InvalidFileName": "Invalid file name.",
   "FileMetadataNotFound": "File metadata not found.",
-  "FileNotFoundOnDisk": "File not found on server."
+  "FileNotFoundOnDisk": "File not found on server.",
+  
+  "UserNotFound": "User not found.",
+  "AlreadyBooked": "You have already booked this event.",
+  "BookingCreatedSuccessfully": "Booking created successfully.",
+  
+  "EmailBookingSubject": "Booking Confirmation",
+  "EmailBookingHeader": "🎉 Booking Confirmation",
+  "EmailGreeting": "Congratulations! You have successfully booked the event.",
+  "EmailEventDetails": "📅 Event Details",
+  "EmailEventName": "Event Name",
+  "EmailStartTime": "Start Time",
+  "EmailEndTime": "End Time",
+  "EmailLocation": "Location",
+  "EmailThankYou": "Thank you for using our service."
 }

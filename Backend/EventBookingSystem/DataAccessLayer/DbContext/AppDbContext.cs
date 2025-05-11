@@ -23,6 +23,11 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
         modelBuilder.Entity<IdentityUserLogin<string>>(e => e.ToTable("UserLogins"));
         modelBuilder.Entity<IdentityRoleClaim<string>>(e => e.ToTable("RoleCliams"));
         modelBuilder.Entity<IdentityUserToken<string>>(e => e.ToTable("UserTokens"));
+        
+        
+        modelBuilder.Entity<Event>()
+            .Property(e => e.Price)
+            .HasPrecision(18, 2);
     }
 
     public DbSet<User> Users { get; set; } = null!;

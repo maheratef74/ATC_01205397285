@@ -58,6 +58,20 @@ public class BookingRepository : IBookingRepository
         }
     }
 
+    public async Task<bool> AlreadyBookedAsync(string userId, Guid eventId)
+    {
+        return await _dbContext.Bookings
+            .AnyAsync(b => b.UserId == userId && b.EventId == eventId);
+    }
+
+    public async Task<List<Guid>> GetBookedEventIdsByUserAsync(string userId)
+    {
+       return await _dbContext.Bookings
+            .Where(b => b.UserId == userId)
+            .Select(b => b.EventId)
+            .ToListAsync();
+    }
+    
     public async Task SaveChangesAsync()
     {
         await _dbContext.SaveChangesAsync();

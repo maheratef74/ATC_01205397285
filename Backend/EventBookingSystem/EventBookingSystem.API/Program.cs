@@ -2,6 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
+using BusinessLogicLayer.Jobs;
+using BusinessLogicLayer.Services.BookingService;
+using BusinessLogicLayer.Services.EmailService;
 using BusinessLogicLayer.Services.FileService;
 using BusinessLogicLayer.Services.LocalizationService;
 using BusinessLogicLayer.Services.ResponseService;
@@ -107,6 +110,9 @@ builder.Services.AddScoped<IFileService, FileService>();
 builder.Services.AddScoped<IResponseService, ResponseService>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IUploadedFileRepositry, UploadedFileRepositry>();
+builder.Services.AddHostedService<ExpiredEventCleanupService>();
+builder.Services.AddScoped<IBookingService, BookingService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
 
 #endregion
 

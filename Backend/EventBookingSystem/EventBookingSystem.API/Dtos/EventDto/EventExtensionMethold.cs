@@ -20,4 +20,21 @@ public static class EventExtensionMethold
             Venue = request.Venue
         };
     }
+    
+    public static List<EventDto> ToEventDtos(this IEnumerable<Event> events, List<Guid> bookedEventIds)
+    {
+        return events.Select(e => new EventDto
+        {
+            Id = e.Id,
+            EventName = e.EventName,
+            Description = e.Description,
+            Category = e.Category,
+            StartDate = e.StartDate,
+            EndDate = e.EndDate,
+            Venue = e.Venue,
+            Price = e.Price,
+            ImageUrl = e.ImageUrl,
+            IsBooked = bookedEventIds?.Contains(e.Id) ?? false
+        }).ToList();
+    }
 }

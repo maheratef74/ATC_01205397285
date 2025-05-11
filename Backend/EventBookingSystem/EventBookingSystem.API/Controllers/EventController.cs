@@ -1,7 +1,9 @@
+using System.Security.Claims;
 using BusinessLogicLayer.Services.ResponseService;
 using BusinessLogicLayer.Shared;
 using DataAccessLayer.Entities;
 using DataAccessLayer.Enums;
+using DataAccessLayer.Repositories.Booking;
 using DataAccessLayer.Repositories.Event;
 using EventBookingSystem.API.Dtos.EventDto;
 using EventBookingSystem.API.Models.Event;
@@ -19,12 +21,15 @@ public class EventController:ControllerBase
     private readonly IEventRepository _eventRepository;
     private readonly IStringLocalizer<AuthenticationController> _localizer;
     private readonly IResponseService _responseService;
-
-    public EventController(IEventRepository eventRepository, IStringLocalizer<AuthenticationController> localizer, IResponseService responseService)
+    private readonly IHttpContextAccessor _httpContextAccessor;
+    private readonly IBookingRepository _bookingRepository;
+    public EventController(IEventRepository eventRepository, IStringLocalizer<AuthenticationController> localizer, IResponseService responseService, IHttpContextAccessor httpContextAccessor, IBookingRepository bookingRepository)
     {
         _eventRepository = eventRepository;
         _localizer = localizer;
         _responseService = responseService;
+        _httpContextAccessor = httpContextAccessor;
+        _bookingRepository = bookingRepository;
     }
     
     [Authorize(Roles = Roles.Admin)]
@@ -83,38 +88,52 @@ public class EventController:ControllerBase
         return _responseService.CreateResponse(Result<string>.SuccessMessage(_localizer["EventDeletedSuccessfully"]));
     }
     
-    [HttpGet]
-    public async Task<IActionResult> GetAllEvents([FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 10)
+    [HttpGet("upcoming")]
+    public async Task<IActionResult> GetUpcomingEvents([FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 10)
     {
-        var items = await _eventRepository.GetUpcomingAsync(pageNumber, pageSize);
+        var user = _httpContextAccessor.HttpContext?.User;
+        var userId = user?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        
+        var events = await _eventRepository.GetUpcomingAsync(pageNumber, pageSize);
         var totalCount = await _eventRepository.GetUpcomingTotalCountAsync();
 
-        var result = new PagedResult<Event>
+        var bookedEventIds = await _bookingRepository.GetBookedEventIdsByUserAsync(userId);
+
+        var eventDtos = events.ToEventDtos(bookedEventIds);
+
+        var result = new PagedResult<EventDto>
         {
-            Items = items,
+            Items = eventDtos,
             Page = pageNumber,
             PageSize = pageSize,
             TotalItems = totalCount
         };
 
-        return _responseService.CreateResponse(Result<PagedResult<Event>>.Success(result));
+        return _responseService.CreateResponse(Result<PagedResult<EventDto>>.Success(result));
     }
 
-    [HttpGet("category/{category}")]
-    public async Task<IActionResult> GetEventsByCategory(EventCategory category, [FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 10)
+    [HttpGet("upcoming/category/{category}")]
+    public async Task<IActionResult> GetUpcomingEventsByCategory(EventCategory category, [FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 10)
     {
-        var items = await _eventRepository.GetUpcomingByCategoryAsync(category, pageNumber, pageSize);
+        var user = _httpContextAccessor.HttpContext?.User;
+        var userId = user?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        
+        var events = await _eventRepository.GetUpcomingByCategoryAsync(category, pageNumber, pageSize);
         var totalCount = await _eventRepository.GetUpcomingTotalCountByCategoryAsync(category);
 
-        var result = new PagedResult<Event>
+        var bookedEventIds = await _bookingRepository.GetBookedEventIdsByUserAsync(userId);
+        
+        var eventDtos = events.ToEventDtos(bookedEventIds);
+
+        var result = new PagedResult<EventDto>
         {
-            Items = items,
+            Items = eventDtos,
             Page = pageNumber,
             PageSize = pageSize,
             TotalItems = totalCount
         };
 
-        return _responseService.CreateResponse(Result<PagedResult<Event>>.Success(result));
+        return _responseService.CreateResponse(Result<PagedResult<EventDto>>.Success(result));
     }
 
 }

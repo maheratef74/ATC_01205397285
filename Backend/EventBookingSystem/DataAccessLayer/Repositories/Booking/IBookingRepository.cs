@@ -8,5 +8,7 @@ public interface IBookingRepository
     Task<int> GetTotalCountByEventAsync(Guid eventId); 
     Task AddAsync(Booking booking);
     Task DeleteAsync(Guid bookingId);
+    Task<bool> AlreadyBookedAsync(string userId, Guid eventId);
+    Task<List<Guid>> GetBookedEventIdsByUserAsync(string userId);
     Task SaveChangesAsync();
 }

@@ -2,7 +2,7 @@ namespace DataAccessLayer.Entities;
 
 public class Booking
 {
-    public Guid Id { get; set; }
+    public Guid Id { get; set; } = new Guid();
         
     public Guid EventId { get; set; }
     public Event Event { get; set; } = null!;
