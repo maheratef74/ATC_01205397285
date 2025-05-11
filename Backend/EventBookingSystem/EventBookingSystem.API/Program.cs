@@ -42,12 +42,12 @@ var Configuration = builder.Configuration;
 // Add CORS services
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAll",
-        builder =>
+    options.AddPolicy("AllowReactApp", builder =>
         {
             builder.AllowAnyOrigin()
                 .AllowAnyMethod()
-                .AllowAnyHeader();
+                .AllowAnyHeader()
+                .AllowCredentials();
         });
 });
 
@@ -207,13 +207,10 @@ catch (Exception ex)
 //}
 
 
-
-app.UseCors("AllowAll");
-
 app.UseRequestLocalization(localizationOptions);
 
 app.UseHttpsRedirection();
-
+app.UseCors("AllowReactApp");
 app.UseAuthentication();
 app.UseAuthorization();
 

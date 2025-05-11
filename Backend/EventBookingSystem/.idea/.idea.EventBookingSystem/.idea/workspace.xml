@@ -9,22 +9,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c2749b1-bb74-4d43-9999-9213b06920ac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/EventBookingSystem.API/SwaggerUI/AddLanguageHeaderParameter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EventBookingSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EventBookingSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessLogicLayer/Services/BookingService/BookingService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessLogicLayer/Services/BookingService/BookingService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessLogicLayer/Shared/PagedResult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/Shared/PagedResult.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessLogicLayer/Shared/Result.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/Shared/Result.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccessLayer/Entities/Event.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/Entities/Event.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccessLayer/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/Migrations/AppDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccessLayer/Repositories/Booking/BookingRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/Repositories/Booking/BookingRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccessLayer/Repositories/Booking/IBookingRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/Repositories/Booking/IBookingRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccessLayer/Repositories/Event/EventRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/Repositories/Event/EventRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccessLayer/Repositories/Event/IEventRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/Repositories/Event/IEventRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/BookingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/BookingController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Resources/ar-EG.json" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Resources/ar-EG.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Resources/en-US.json" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Resources/en-US.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +123,8 @@
       <workItem from="1746896671069" duration="5313000" />
       <workItem from="1746902789201" duration="441000" />
       <workItem from="1746911076941" duration="16215000" />
-      <workItem from="1746952205993" duration="10797000" />
+      <workItem from="1746952205993" duration="11139000" />
+      <workItem from="1746984512028" duration="255000" />
     </task>
     <servers />
   </component>

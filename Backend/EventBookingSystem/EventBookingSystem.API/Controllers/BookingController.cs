@@ -2,6 +2,7 @@ using System.Security.Claims;
 using BusinessLogicLayer.Services.BookingService;
 using BusinessLogicLayer.Services.ResponseService;
 using BusinessLogicLayer.Shared;
+using DataAccessLayer.Entities;
 using DataAccessLayer.Repositories.Booking;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -38,6 +39,7 @@ public class BookingController : ControllerBase
         return _responseService.CreateResponse(result);
     }
     
+    [Authorize(Roles = Roles.Admin)]
     [HttpGet("upcoming")]
     public async Task<IActionResult> GetUpcomingEventBookings([FromQuery] int page = 1, [FromQuery] int pageSize = 10)
     {
