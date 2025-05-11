@@ -1,5 +1,6 @@
 using DataAccessLayer.DbContext;
 using DataAccessLayer.Enums;
+using EventBookingSystem.API.Dtos.EventDto;
 using Microsoft.EntityFrameworkCore;
 
 namespace DataAccessLayer.Repositories.Event;
@@ -101,6 +102,31 @@ public class EventRepository : IEventRepository
             _dbContext.Events.Update(evt);
         }
     }
+
+    public async Task<List<EventCategoryCountDto>> GetEventCountsByCategoryAsync()
+    {
+        var allCategories = Enum.GetValues(typeof(EventCategory)).Cast<EventCategory>();
+
+        var eventCounts = await _dbContext.Events
+            .GroupBy(e => e.Category)
+            .Select(g => new
+            {
+                Category = g.Key,
+                Count = g.Count()
+            })
+            .ToListAsync();
+
+        var result = allCategories
+            .Select(category => new EventCategoryCountDto
+            {
+                Category = category.ToString(),
+                Count = eventCounts.FirstOrDefault(e => e.Category == category)?.Count ?? 0
+            })
+            .ToList();
+
+        return result;
+    }
+
 
     public async Task SaveChangesAsync()
     {

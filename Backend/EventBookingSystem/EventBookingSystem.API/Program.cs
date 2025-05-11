@@ -43,12 +43,11 @@ var Configuration = builder.Configuration;
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReactApp", builder =>
-        {
-            builder.AllowAnyOrigin()
-                .AllowAnyMethod()
-                .AllowAnyHeader()
-                .AllowCredentials();
-        });
+    {
+        builder.AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+    });
 });
 
 #region Configure Swagger

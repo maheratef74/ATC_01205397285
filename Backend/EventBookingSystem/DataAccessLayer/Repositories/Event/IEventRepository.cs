@@ -1,4 +1,5 @@
 using DataAccessLayer.Enums;
+using EventBookingSystem.API.Dtos.EventDto;
 
 namespace DataAccessLayer.Repositories.Event;
 using DataAccessLayer.Entities;
@@ -14,5 +15,6 @@ public interface IEventRepository
     Task DeleteAsync(Guid eventId);
     Task<int> DeleteExpiredEventsAsync();
     Task IncrementTicketsBookedAsync(Guid eventId);
+    Task<List<EventCategoryCountDto>> GetEventCountsByCategoryAsync();
     Task SaveChangesAsync();
 }

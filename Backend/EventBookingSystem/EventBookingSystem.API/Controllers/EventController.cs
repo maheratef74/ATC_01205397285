@@ -136,4 +136,10 @@ public class EventController:ControllerBase
         return _responseService.CreateResponse(Result<PagedResult<EventDto>>.Success(result));
     }
 
+    [HttpGet("category-counts")]
+    public async Task<IActionResult> GetEventCountsByCategory()
+    {
+        var result = await _eventRepository.GetEventCountsByCategoryAsync();
+        return Ok(result);
+    }
 }
