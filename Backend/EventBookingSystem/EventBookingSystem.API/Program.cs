@@ -205,11 +205,11 @@ catch (Exception ex)
     app.UseSwagger();
     app.UseSwaggerUI();
 //}
-
+app.UseCors("AllowAll");
 app.UseRequestLocalization(localizationOptions);
 
 app.UseHttpsRedirection();
-app.UseCors("AllowAll");
+
 app.UseAuthentication();
 app.UseAuthorization();
 
