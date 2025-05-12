@@ -1,3 +1,5 @@
+using DataAccessLayer.Enums;
+
 namespace DataAccessLayer.Entities;
 
 public class Booking
@@ -10,5 +12,6 @@ public class Booking
     public string UserId { get; set; } = string.Empty;
     public User User { get; set; } = null!;
     
+    public BookingStatus Status { get; set; } = BookingStatus.Pending;
     public DateTime BookingDate { get; set; } = DateTime.UtcNow;
 }

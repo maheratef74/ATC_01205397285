@@ -1,5 +1,3 @@
-using BusinessLogicLayer.Shared;
-
 namespace DataAccessLayer.Repositories.Booking;
 using DataAccessLayer.Entities;
 public interface IBookingRepository
@@ -9,9 +7,14 @@ public interface IBookingRepository
     Task<IEnumerable<Booking>> GetAllByEventAsync(Guid eventId, int pageNumber, int pageSize);
     Task<int> GetTotalCountByEventAsync(Guid eventId); 
     Task AddAsync(Booking booking);
+    Task<bool> UpdateAsync(Booking booking);
     Task DeleteAsync(Guid bookingId);
     Task<bool> AlreadyBookedAsync(string userId, Guid eventId);
     Task<List<Guid>> GetBookedEventIdsByUserAsync(string userId);
-    Task<PagedResult<Booking>> GetUpcomingEventBookingsAsync(int page, int pageSize);
+    Task<List<Booking>> GetUpcomingBookedEventByUserAsync(string userId);
+    Task<int> CountUpcomingEventBookingsAsync();
+    Task<List<Booking>> GetUpcomingEventBookingsAsync(int page, int pageSize);
+    Task<List<Booking>> GetCompletedBookedEventsByUserAsync(string userId);
+    Task<List<Booking>> GetCancelledBookedEventsByUserAsync(string userId);
     Task SaveChangesAsync();
 }

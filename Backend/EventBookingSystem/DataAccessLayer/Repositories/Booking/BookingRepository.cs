@@ -1,8 +1,9 @@
-using BusinessLogicLayer.Shared;
 using DataAccessLayer.DbContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Client;
 using DataAccessLayer.Entities;
+using DataAccessLayer.Enums;
+
 namespace DataAccessLayer.Repositories.Booking;
 
 public class BookingRepository : IBookingRepository
@@ -13,7 +14,7 @@ public class BookingRepository : IBookingRepository
     {
         _dbContext = dbContext;
     }
-
+    
     public async Task<Entities.Booking?> GetByIdAsync(Guid bookingId)
     {
         return await _dbContext.Bookings
@@ -27,6 +28,7 @@ public class BookingRepository : IBookingRepository
         return await _dbContext.Bookings
             .Where(b => b.UserId == userId)
             .Include(b => b.Event)
+            .Include(b=> b.User )
             .ToListAsync();
     }
 
@@ -44,7 +46,12 @@ public class BookingRepository : IBookingRepository
     { 
         return await _dbContext.Bookings.CountAsync(b => b.EventId == eventId);
     }
-
+    
+    public async Task<bool> UpdateAsync(Entities.Booking booking)
+    {
+        _dbContext.Bookings.Update(booking);
+        return await Task.FromResult(true);
+    }
     public async Task AddAsync(Entities.Booking booking)
     {
         await _dbContext.Bookings.AddAsync(booking);
@@ -73,28 +80,54 @@ public class BookingRepository : IBookingRepository
             .ToListAsync();
     }
 
-    public async Task<PagedResult<Entities.Booking>> GetUpcomingEventBookingsAsync(int page, int pageSize)
+    public async Task<List<Entities.Booking>> GetUpcomingBookedEventByUserAsync(string userId)
     {
-        var query = _dbContext.Bookings
+        return await _dbContext.Bookings
+            .Include(b => b.Event)
+            .Include(b => b.User)
+            .Where(b => b.UserId == userId && b.Event.StartDate > DateTime.UtcNow)
+            .OrderBy(b => b.Event.StartDate)
+            .ToListAsync();
+    }
+
+    public async Task<int> CountUpcomingEventBookingsAsync()
+    {
+        return await _dbContext.Bookings
+            .Include(b => b.Event)
+            .Where(b => b.Event.StartDate > DateTime.UtcNow)
+            .CountAsync();
+    }
+
+    public async Task<List<Entities.Booking>> GetUpcomingEventBookingsAsync(int page, int pageSize)
+    {
+        return await _dbContext.Bookings
             .Include(b => b.Event)
             .Include(b => b.User)
             .Where(b => b.Event.StartDate > DateTime.UtcNow)
-            .OrderBy(b => b.Event.StartDate);
-
-        var totalItems = await query.CountAsync();
-        var items = await query
+            .OrderBy(b => b.Event.StartDate)
             .Skip((page - 1) * pageSize)
             .Take(pageSize)
             .ToListAsync();
-
-        return new PagedResult<Entities.Booking>
-        {
-            TotalItems = totalItems,
-            Page = page,
-            PageSize = pageSize,
-            Items = items
-        };
     }
+
+    public async Task<List<Entities.Booking>> GetCompletedBookedEventsByUserAsync(string userId)
+    {
+        return await _dbContext.Bookings
+            .Include(b => b.Event)
+            .Include(b => b.User)
+            .Where(b => b.UserId == userId && b.Event.EventStatus == EventStatus.Completed)
+            .ToListAsync();
+    }
+
+    public async Task<List<Entities.Booking>> GetCancelledBookedEventsByUserAsync(string userId)
+    {
+        return await _dbContext.Bookings
+            .Include(b => b.Event)
+            .Include(b => b.User)
+            .Where(b => b.UserId == userId && b.Status == BookingStatus.Cancelled)
+            .ToListAsync();
+    }
+
 
     public async Task SaveChangesAsync()
     {

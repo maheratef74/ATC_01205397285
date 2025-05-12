@@ -77,16 +77,21 @@ public class EventRepository : IEventRepository
         }
     }
 
-    public async Task<int> DeleteExpiredEventsAsync()
+    public async Task<int> MarkExpiredEventsAsCompletedAsync()
     {
         var now = DateTime.UtcNow;
+    
         var expiredEvents = await _dbContext.Events
-            .Where(e => e.EndDate < now)
+            .Where(e => e.EndDate < now && e.EventStatus != EventStatus.Completed)
             .ToListAsync();
 
         if (expiredEvents.Any())
         {
-            _dbContext.Events.RemoveRange(expiredEvents);
+            foreach (var ev in expiredEvents)
+            {
+                ev.EventStatus = EventStatus.Completed;
+            }
+
             return await _dbContext.SaveChangesAsync();
         }
 
