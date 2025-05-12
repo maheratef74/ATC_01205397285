@@ -38,19 +38,20 @@ builder.Services.AddSwaggerGen();
 var Configuration = builder.Configuration;
 // Add services to the container.
 
-
-// Add CORS services
+// Add CORS
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAll",
-        builder =>
+    options.AddPolicy("AllowReactApp",
+        policy =>
         {
-            builder.AllowAnyOrigin()
-                .AllowAnyMethod()
-                .AllowAnyHeader();
+            policy.WithOrigins(
+                    "https://booking-system-3ayb.vercel.app", // deployed frontend
+                    "http://localhost:3000"                    // optional: for local dev
+                )
+                .AllowAnyHeader()
+                .AllowAnyMethod();
         });
 });
-
 
 #region Configure Swagger
 
@@ -206,11 +207,12 @@ catch (Exception ex)
     app.UseSwagger();
     app.UseSwaggerUI();
 //}
-    app.UseCors("AllowAll");
+   // app.UseCors("AllowAll");
 app.UseRequestLocalization(localizationOptions);
 
 app.UseHttpsRedirection();
 
+app.UseCors("AllowReactApp");
 app.UseAuthentication();
 app.UseAuthorization();
 
