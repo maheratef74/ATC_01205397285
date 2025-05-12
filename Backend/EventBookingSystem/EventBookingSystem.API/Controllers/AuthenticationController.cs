@@ -1,4 +1,5 @@
 using System.Net;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using BusinessLogicLayer.Services.ResponseService;
 using BusinessLogicLayer.Services.TokenService;
@@ -61,8 +62,12 @@ public class AuthenticationController : ControllerBase
             return _responseService.CreateResponse(Result<string>.Failure(_localizer["InvalidCredentials"] , HttpStatusCode.Unauthorized));
         }
         var token = await _tokenService.GenerateToken(user , request.RememberMe);
-
-        return _responseService.CreateResponse(Result<LoginDto>.Success(user.ToLoginDto(), token , HttpStatusCode.OK));
+        var loginDto = user.ToLoginDto();
+        
+        var userRoles = await _userManager.GetRolesAsync(user);
+        loginDto.Role = userRoles.FirstOrDefault();
+        
+        return _responseService.CreateResponse(Result<LoginDto>.Success(loginDto , token , HttpStatusCode.OK));
      }
     
 }

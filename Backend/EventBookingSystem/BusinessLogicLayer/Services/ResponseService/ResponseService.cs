@@ -1,5 +1,6 @@
 using System.Net;
 using BusinessLogicLayer.Shared;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BusinessLogicLayer.Services.ResponseService;
@@ -28,6 +29,8 @@ public class ResponseService : IResponseService
                 return new BadRequestObjectResult(error);
             case HttpStatusCode.Unauthorized:
                 return new UnauthorizedObjectResult(error);
+            case HttpStatusCode.Forbidden:
+                return new ObjectResult(error) { StatusCode = StatusCodes.Status403Forbidden };
             default:
                 return new BadRequestObjectResult(error);
         }

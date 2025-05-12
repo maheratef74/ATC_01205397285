@@ -10,17 +10,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5c2749b1-bb74-4d43-9999-9213b06920ac" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EventBookingSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EventBookingSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessLogicLayer/Jobs/MarkExpiredEventsAsCompletedAsync.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessLogicLayer/Jobs/MarkExpiredEventsAsCompletedAsync.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessLogicLayer/Services/BookingService/BookingService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessLogicLayer/Services/BookingService/BookingService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessLogicLayer/Services/BookingService/IBookingService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessLogicLayer/Services/BookingService/IBookingService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/BookingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/BookingController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/UserController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Models/Booking/BookingDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Models/Booking/BookingDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Models/Booking/BookingExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Models/Booking/BookingExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Models/Event/EventRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Models/Event/EventRequest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Resources/ar-EG.json" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Resources/ar-EG.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Resources/en-US.json" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Resources/en-US.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessLogicLayer/Services/ResponseService/ResponseService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessLogicLayer/Services/ResponseService/ResponseService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/AuthenticationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/AuthenticationController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Dtos/AuthDtos/LoginDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Dtos/AuthDtos/LoginDto.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +127,7 @@
       <workItem from="1746911076941" duration="16215000" />
       <workItem from="1746952205993" duration="11139000" />
       <workItem from="1746984512028" duration="3528000" />
-      <workItem from="1747037538016" duration="26844000" />
+      <workItem from="1747037538016" duration="29100000" />
     </task>
     <servers />
   </component>
@@ -164,13 +156,13 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/EventBookingSystem.API/Controllers/AuthenticationController.cs</url>
-          <line>36</line>
+          <line>37</line>
           <properties documentPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/AuthenticationController.cs" containingFunctionPresentation="Method 'Register'">
             <startOffsets>
-              <option value="1446" />
+              <option value="1476" />
             </startOffsets>
             <endOffsets>
-              <option value="1447" />
+              <option value="1477" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="4" />
@@ -267,7 +259,7 @@
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/EventBookingSystem.API/Models/Booking/BookingExtensions.cs</url>
+          <url>file://$PROJECT_DIR$/EventBookingSystem.API/Dtos/Booking/BookingExtensions.cs</url>
           <line>5</line>
           <properties documentPath="$PROJECT_DIR$/EventBookingSystem.API/Models/Booking/BookingExtensions.cs" containingFunctionPresentation="Method 'ToDBookingto'">
             <startOffsets>
