@@ -46,8 +46,12 @@ builder.Services.AddCors(options =>
         {
             policy.WithOrigins(
                     "https://booking-system-3ayb.vercel.app", // deployed frontend
-                    "http://localhost:3000"                    // optional: for local dev
+                    "http://localhost:5173",          
+                    "http://localhost:3000",
+                    "http://eventsystem.runasp.net", 
+                    "https://eventsystem.runasp.net"  
                 )
+                
                 .AllowAnyHeader()
                 .AllowAnyMethod();
         });
