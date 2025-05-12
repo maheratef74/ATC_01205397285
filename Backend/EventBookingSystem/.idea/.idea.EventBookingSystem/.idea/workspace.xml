@@ -10,6 +10,17 @@
   <component name="ChangeListManager">
     <list default="true" id="5c2749b1-bb74-4d43-9999-9213b06920ac" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EventBookingSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EventBookingSystem/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessLogicLayer/Jobs/MarkExpiredEventsAsCompletedAsync.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessLogicLayer/Jobs/MarkExpiredEventsAsCompletedAsync.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessLogicLayer/Services/BookingService/BookingService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessLogicLayer/Services/BookingService/BookingService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessLogicLayer/Services/BookingService/IBookingService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessLogicLayer/Services/BookingService/IBookingService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/BookingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/BookingController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/UserController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Models/Booking/BookingDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Models/Booking/BookingDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Models/Booking/BookingExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Models/Booking/BookingExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Models/Event/EventRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Models/Event/EventRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Resources/ar-EG.json" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Resources/ar-EG.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Resources/en-US.json" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Resources/en-US.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +54,7 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c69576b4a074ad2839225611609498e344b7e2819997af48dbb2d2f8257f3/EntityFrameworkQueryableExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/maher/RiderProjects/ATC_01205397285/Backend/EventBookingSystem/DataAccessLayer/Enums/EventCategory.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file:///usr/lib/dotnet/sdk/8.0.115/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -57,27 +69,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.EventBookingSystem.API: http.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.EventBookingSystem.API: http.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;GitIgnore&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "GitIgnore"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.EventBookingSystem.API: http">
     <configuration name="EventBookingSystem.API: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/EventBookingSystem.API/EventBookingSystem.API.csproj" />
@@ -123,6 +135,7 @@
       <workItem from="1746911076941" duration="16215000" />
       <workItem from="1746952205993" duration="11139000" />
       <workItem from="1746984512028" duration="3528000" />
+      <workItem from="1747037538016" duration="26844000" />
     </task>
     <servers />
   </component>
@@ -216,29 +229,107 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/DataAccessLayer/Repositories/Booking/BookingRepository.cs</url>
-          <line>68</line>
+          <line>75</line>
           <properties documentPath="$PROJECT_DIR$/DataAccessLayer/Repositories/Booking/BookingRepository.cs" containingFunctionPresentation="Method 'GetBookedEventIdsByUserAsync'">
             <startOffsets>
-              <option value="2066" />
+              <option value="2272" />
             </startOffsets>
             <endOffsets>
-              <option value="2067" />
+              <option value="2273" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/BusinessLogicLayer/Services/BookingService/BookingService.cs</url>
-          <line>31</line>
+          <line>32</line>
           <properties documentPath="$PROJECT_DIR$/BusinessLogicLayer/Services/BookingService/BookingService.cs" containingFunctionPresentation="Method 'CreateBookingAsync'">
             <startOffsets>
-              <option value="1293" />
+              <option value="1322" />
             </startOffsets>
             <endOffsets>
-              <option value="1294" />
+              <option value="1323" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/EventBookingSystem.API/Controllers/UserController.cs</url>
+          <line>29</line>
+          <properties documentPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/UserController.cs" containingFunctionPresentation="Method 'GetUserBookings'">
+            <startOffsets>
+              <option value="1161" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1162" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/EventBookingSystem.API/Models/Booking/BookingExtensions.cs</url>
+          <line>5</line>
+          <properties documentPath="$PROJECT_DIR$/EventBookingSystem.API/Models/Booking/BookingExtensions.cs" containingFunctionPresentation="Method 'ToDBookingto'">
+            <startOffsets>
+              <option value="189" />
+            </startOffsets>
+            <endOffsets>
+              <option value="190" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/EventBookingSystem.API/Controllers/UserController.cs</url>
+          <line>39</line>
+          <properties documentPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/UserController.cs" containingFunctionPresentation="Method 'GetMyUpcomingBookings'">
+            <startOffsets>
+              <option value="1562" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1563" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/EventBookingSystem.API/Controllers/UserController.cs</url>
+          <line>52</line>
+          <properties documentPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/UserController.cs" containingFunctionPresentation="Method 'GetCompletedBookedEvents'">
+            <startOffsets>
+              <option value="2027" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2028" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/EventBookingSystem.API/Controllers/UserController.cs</url>
+          <line>64</line>
+          <properties documentPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/UserController.cs" containingFunctionPresentation="Method 'GetCancelledBookedEvents'">
+            <startOffsets>
+              <option value="2467" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2468" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/DataAccessLayer/Repositories/Booking/BookingRepository.cs</url>
+          <line>122</line>
+          <properties documentPath="$PROJECT_DIR$/DataAccessLayer/Repositories/Booking/BookingRepository.cs" containingFunctionPresentation="Method 'GetCancelledBookedEventsByUserAsync'">
+            <startOffsets>
+              <option value="3908" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3909" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -3,6 +3,7 @@ using BusinessLogicLayer.Services.EmailService;
 using BusinessLogicLayer.Services.ResponseService;
 using BusinessLogicLayer.Shared;
 using DataAccessLayer.Entities;
+using DataAccessLayer.Enums;
 using DataAccessLayer.Repositories.Booking;
 using DataAccessLayer.Repositories.Event;
 using DataAccessLayer.Repositories.User;
@@ -42,6 +43,12 @@ public class BookingService : IBookingService
         if (alreadyBooked)
             return Result<string>.Failure(_localizer["AlreadyBooked"]);
 
+        if (eventExists.TicketsBooked >= eventExists.Capacity)
+            return Result<string>.Failure(_localizer["EventFull"]);
+        
+        if (eventExists.StartDate < DateTime.UtcNow)
+            return Result<string>.Failure(_localizer["EventStarted"]);
+        
         var booking = new Booking
         {
             UserId = userId,
@@ -50,6 +57,7 @@ public class BookingService : IBookingService
         };
         await _bookingRepository.AddAsync(booking);
         await _eventRepository.IncrementTicketsBookedAsync(eventId);
+        
         await _bookingRepository.SaveChangesAsync();
 
         var emailSubject = _localizer["EmailBookingSubject"];
@@ -60,7 +68,40 @@ public class BookingService : IBookingService
 
         return Result<string>.SuccessMessage(_localizer["BookingCreatedSuccessfully"]);
     }
-        private string GenerateBookingConfirmationEmail(User user, Event evt)
+
+    public async Task<Result<string>> CancelBookingAsync(Guid bookingId, string userId)
+    {
+        var booking = await _bookingRepository.GetByIdAsync(bookingId);
+
+        if (booking == null)
+        {
+            return Result<string>.Failure(_localizer["BookingNotFound"]);
+        }
+
+        if (booking.Status == BookingStatus.Cancelled)
+        {
+            return Result<string>.Failure(_localizer["BookingAlreadyCancelled"]);
+        }
+
+        if (booking.Event.StartDate <= DateTime.UtcNow)
+        {
+            return Result<string>.Failure(_localizer["CannotCancelStartedEvent"]);
+        }
+
+        booking.Status = BookingStatus.Cancelled;
+
+        var updateSuccess = await _bookingRepository.UpdateAsync(booking);
+        await _bookingRepository.SaveChangesAsync();
+
+        if (!updateSuccess)
+        {
+            return Result<string>.Failure(_localizer["FailedToCancelBooking"]);
+        }
+
+        return Result<string>.SuccessMessage(_localizer["BookingCancelledSuccessfully"]);
+    }
+
+    private string GenerateBookingConfirmationEmail(User user, Event evt)
         {
             var isRtl = CultureInfo.CurrentCulture.TextInfo.IsRightToLeft;
             var direction = isRtl ? "rtl" : "ltr";

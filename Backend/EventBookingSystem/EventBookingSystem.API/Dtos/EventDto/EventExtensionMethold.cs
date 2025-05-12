@@ -17,7 +17,9 @@ public static class EventExtensionMethold
             EventName = request.EventName,
             ImageUrl = request.ImageUrl,
             Price = request.Price,
-            Venue = request.Venue
+            Venue = request.Venue,
+            Capacity = request.Capacity,
+            Organizer = request.Organizer
         };
     }
     
@@ -34,6 +36,10 @@ public static class EventExtensionMethold
             Venue = e.Venue,
             Price = e.Price,
             ImageUrl = e.ImageUrl,
+            EventStatus = e.EventStatus,
+            Capacity = e.Capacity,
+            Organizer = e.Organizer,
+            TicketsBooked = e.TicketsBooked,
             IsBooked = bookedEventIds?.Contains(e.Id) ?? false
         }).ToList();
     }

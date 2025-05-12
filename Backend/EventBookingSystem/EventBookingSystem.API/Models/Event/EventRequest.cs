@@ -31,6 +31,14 @@ public class EventRequest
     [Required(ErrorMessage = "Price")]
     [Range(0, double.MaxValue, ErrorMessage = "PriceInvalid")]
     public decimal Price { get; set; }
+    
+    [Required(ErrorMessage = "Organizer")]
+    [MaxLength(100, ErrorMessage = "OrganizerMaxLength")]
+    public string Organizer { get; set; } = string.Empty;
+
+    [Required(ErrorMessage = "Capacity")]
+    [Range(1, int.MaxValue, ErrorMessage = "CapacityInvalid")]
+    public int Capacity { get; set; }
 
     [Required(ErrorMessage = "ImageUrl")]
     public string ImageUrl { get; set; } = string.Empty;

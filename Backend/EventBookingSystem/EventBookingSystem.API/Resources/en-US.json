@@ -34,7 +34,11 @@
   "PriceInvalid": "Price must be a positive number",
   "ImageUrl": "Image URL is required",
   "ImageUrlInvalid": "Invalid image URL",
-
+  "Organizer": "Organizer is required.",
+  "OrganizerMaxLength": "Organizer name cannot exceed 100 characters.",
+  "Capacity": "Capacity is required.",
+  "CapacityInvalid": "Capacity must be at least 1.",
+  
   "EventCreatedSuccessfully": "Event created successfully",
   "FailedToCreateEvent": "Failed to create event",
 
@@ -52,6 +56,8 @@
   
   "UserNotFound": "User not found.",
   "AlreadyBooked": "You have already booked this event.",
+  "EventFull": "This event is fully booked. No more tickets are available.",
+  "EventStarted": "This event has already started and cannot be booked.",
   "BookingCreatedSuccessfully": "Booking created successfully.",
   
   "EmailBookingSubject": "Booking Confirmation",
@@ -62,5 +68,13 @@
   "EmailStartTime": "Start Time",
   "EmailEndTime": "End Time",
   "EmailLocation": "Location",
-  "EmailThankYou": "Thank you for using our service."
+  "EmailThankYou": "Thank you for using our service.",
+
+  "BookingCancelledSuccessfully": "Booking has been cancelled successfully.",
+  "FailedToCancelBooking": "Failed to cancel the booking.",
+  "BookingNotFound": "Booking not found.",
+  "BookingAlreadyCancelled": "This booking has already been cancelled.",
+  "CannotCancelStartedEvent": "Cannot cancel booking for an event that has already started.",
+  "EventUpdatedSuccessfully": "Event updated successfully.",
+  "FailedToUpdateEvent": "Failed to update the event."
 }

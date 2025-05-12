@@ -7,13 +7,13 @@ using Microsoft.Extensions.Logging;
 
 namespace BusinessLogicLayer.Jobs;
 
-public class ExpiredEventCleanupService : BackgroundService
+public class MarkExpiredEventsAsCompletedAsync : BackgroundService
 {
     private readonly IServiceProvider _serviceProvider;
-    private readonly ILogger<ExpiredEventCleanupService> _logger;
-    private readonly TimeSpan _interval = TimeSpan.FromHours(12);
+    private readonly ILogger<MarkExpiredEventsAsCompletedAsync> _logger;
+    private readonly TimeSpan _interval = TimeSpan.FromHours(1);
 
-    public ExpiredEventCleanupService(IServiceProvider serviceProvider, ILogger<ExpiredEventCleanupService> logger)
+    public MarkExpiredEventsAsCompletedAsync(IServiceProvider serviceProvider, ILogger<MarkExpiredEventsAsCompletedAsync> logger)
     {
         _serviceProvider = serviceProvider;
         _logger = logger;
@@ -23,20 +23,20 @@ public class ExpiredEventCleanupService : BackgroundService
     {
         while (!stoppingToken.IsCancellationRequested)
         {
-            await RemoveExpiredEventsAsync();
+            await MarEventsAsCompletedAsync();
             await Task.Delay(_interval, stoppingToken);
         }
     }
-    private async Task RemoveExpiredEventsAsync()
+    private async Task MarEventsAsCompletedAsync()
     {
         using var scope = _serviceProvider.CreateScope();
 
         var _eventRepository = scope.ServiceProvider.GetRequiredService<IEventRepository>();
-        var deletedCount = await _eventRepository.DeleteExpiredEventsAsync();
+        var Count = await _eventRepository.MarkExpiredEventsAsCompletedAsync();
         
-        if (deletedCount > 0)
+        if (Count > 0)
         {
-            _logger.LogInformation($"{deletedCount} expired event(s) deleted at {DateTime.UtcNow}.");
+            _logger.LogInformation($"{Count} expired event(s) deleted at {DateTime.UtcNow}.");
         }
     }
 }

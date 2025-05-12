@@ -34,7 +34,11 @@
   "PriceInvalid": "يجب أن يكون السعر رقماً موجباً",
   "ImageUrl": "رابط الصورة مطلوب",
   "ImageUrlInvalid": "رابط الصورة غير صالح",
-
+  "Organizer": "مطلوب إدخال اسم المنظم.",
+  "OrganizerMaxLength": "يجب ألا يزيد اسم المنظم عن 100 حرف.",
+  "Capacity": "مطلوب إدخال السعة.",
+  "CapacityInvalid": "يجب أن تكون السعة 1 على الأقل.",
+  
   "EventCreatedSuccessfully": "تم إنشاء الحدث بنجاح",
   "FailedToCreateEvent": "فشل في إنشاء الحدث",
 
@@ -52,6 +56,8 @@
   
   "UserNotFound": "لم يتم العثور على المستخدم.",
   "AlreadyBooked": "لقد قمت بالحجز بالفعل لهذا الحدث.",
+  "EventFull": "تم حجز جميع التذاكر لهذا الحدث.",
+  "EventStarted": "لقد بدأ هذا الحدث بالفعل ولا يمكن حجزه.",
   "BookingCreatedSuccessfully": "تم إنشاء الحجز بنجاح.",
   
   "EmailBookingSubject": "تأكيد الحجز",
@@ -62,5 +68,13 @@
   "EmailStartTime": "وقت البدء",
   "EmailEndTime": "وقت الانتهاء",
   "EmailLocation": "المكان",
-  "EmailThankYou": "شكرًا لاستخدامك لخدمتنا."
+  "EmailThankYou": "شكرًا لاستخدامك لخدمتنا.",
+
+  "BookingCancelledSuccessfully": "تم إلغاء الحجز بنجاح.",
+  "FailedToCancelBooking": "فشل في إلغاء الحجز.",
+  "BookingNotFound": "لم يتم العثور على الحجز .",
+  "BookingAlreadyCancelled": "تم إلغاء هذا الحجز بالفعل.",
+  "CannotCancelStartedEvent": "لا يمكن إلغاء الحجز لفعالية بدأت بالفعل.",
+  "EventUpdatedSuccessfully": "تم تحديث الحدث بنجاح.",
+  "FailedToUpdateEvent": "فشل في تحديث الحدث."
 }

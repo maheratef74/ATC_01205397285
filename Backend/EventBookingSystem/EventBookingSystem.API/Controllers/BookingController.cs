@@ -4,6 +4,7 @@ using BusinessLogicLayer.Services.ResponseService;
 using BusinessLogicLayer.Shared;
 using DataAccessLayer.Entities;
 using DataAccessLayer.Repositories.Booking;
+using EventBookingSystem.API.Models.Booking;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
@@ -40,11 +41,23 @@ public class BookingController : ControllerBase
     }
     
     [Authorize(Roles = Roles.Admin)]
-    [HttpGet("upcoming")]
+    [HttpGet("upcoming")]   // for admin dashboard 
     public async Task<IActionResult> GetUpcomingEventBookings([FromQuery] int page = 1, [FromQuery] int pageSize = 10)
     {
-        var result = _responseService.CreateResponse(
-            await _bookingRepository.GetUpcomingEventBookingsAsync(page, pageSize));
+        var countBookings = await _bookingRepository.CountUpcomingEventBookingsAsync();
+        var upcomingBookings = await _bookingRepository.GetUpcomingEventBookingsAsync(page, pageSize);
+        var upcommingBookingDto = upcomingBookings.Select(b => b.ToDBookingto()).ToList();
+        
+        var result = new PagedResult<BookingDto>()
+        {
+            Items = upcommingBookingDto,
+            TotalItems = countBookings,
+            PageSize = pageSize,
+            Page = page
+        };
+        
         return Ok(result);
     }
+    
+   
 }

@@ -123,7 +123,7 @@ builder.Services.AddScoped<IFileService, FileService>();
 builder.Services.AddScoped<IResponseService, ResponseService>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IUploadedFileRepositry, UploadedFileRepositry>();
-builder.Services.AddHostedService<ExpiredEventCleanupService>();
+builder.Services.AddHostedService<MarkExpiredEventsAsCompletedAsync>();
 builder.Services.AddScoped<IBookingService, BookingService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 
