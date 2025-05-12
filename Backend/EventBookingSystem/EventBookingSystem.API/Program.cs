@@ -36,26 +36,30 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 var Configuration = builder.Configuration;
-// Add services to the container.
 
-// Add CORS
+
+#region CORS
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReactApp",
         policy =>
         {
             policy.WithOrigins(
-                    "https://booking-system-3ayb.vercel.app", // deployed frontend
-                    "http://localhost:5173",          
-                    "http://localhost:3000",
-                    "http://eventsystem.runasp.net", 
-                    "https://eventsystem.runasp.net"  
+                    "https://booking-system-tau-eight.vercel.app/", // deployed frontend
+                    "http://localhost:5173",                
+                    "http://localhost:3000",                
+                    "http://eventsystem.runasp.net",        // deployed backend
+                    "https://eventsystem.runasp.net"        // deployed backend
                 )
                 
                 .AllowAnyHeader()
                 .AllowAnyMethod();
         });
 });
+
+#endregion
+
 
 #region Configure Swagger
 
@@ -206,17 +210,15 @@ catch (Exception ex)
 #endregion
 
 // Configure the HTTP request pipeline.
-//if (app.Environment.IsDevelopment())
-//{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-//}
-   // app.UseCors("AllowAll");
+app.UseSwagger();
+app.UseSwaggerUI();
+
+app.UseCors("AllowReactApp");
 app.UseRequestLocalization(localizationOptions);
 
 app.UseHttpsRedirection();
 
-app.UseCors("AllowReactApp");
+
 app.UseAuthentication();
 app.UseAuthorization();
 

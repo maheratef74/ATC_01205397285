@@ -27,7 +27,7 @@ public class ResponseService : IResponseService
             case HttpStatusCode.BadRequest:
                 return new BadRequestObjectResult(error);
             case HttpStatusCode.Unauthorized:
-              //  return new UnauthorizedObjectResult(error);
+                return new UnauthorizedObjectResult(error);
             default:
                 return new BadRequestObjectResult(error);
         }
