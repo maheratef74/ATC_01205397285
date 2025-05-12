@@ -51,6 +51,7 @@ builder.Services.AddCors(options =>
         });
 });
 
+
 #region Configure Swagger
 
 builder.Services.AddSwaggerGen(c =>
@@ -205,7 +206,7 @@ catch (Exception ex)
     app.UseSwagger();
     app.UseSwaggerUI();
 //}
-app.UseCors("AllowAll");
+    app.UseCors("AllowAll");
 app.UseRequestLocalization(localizationOptions);
 
 app.UseHttpsRedirection();
