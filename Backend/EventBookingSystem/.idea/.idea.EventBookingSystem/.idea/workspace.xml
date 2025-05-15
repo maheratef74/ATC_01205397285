@@ -9,18 +9,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c2749b1-bb74-4d43-9999-9213b06920ac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/DataAccessLayer/Filters/BookingFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataAccessLayer/Filters/EventFilter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EventBookingSystem.API/SwaggerUI/EnumSchemaFilter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EventBookingSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EventBookingSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccessLayer/Repositories/Booking/BookingRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/Repositories/Booking/BookingRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccessLayer/Repositories/Booking/IBookingRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/Repositories/Booking/IBookingRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccessLayer/Repositories/Event/EventRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/Repositories/Event/EventRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccessLayer/Repositories/Event/IEventRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/Repositories/Event/IEventRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/EventController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/EventController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/UserController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/EventBookingSystem.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/EventBookingSystem.API.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +125,7 @@
       <workItem from="1746952205993" duration="11139000" />
       <workItem from="1746984512028" duration="3528000" />
       <workItem from="1747037538016" duration="30434000" />
-      <workItem from="1747330895907" duration="13571000" />
+      <workItem from="1747330895907" duration="15049000" />
     </task>
     <servers />
   </component>

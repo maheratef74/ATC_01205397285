@@ -57,5 +57,5 @@ public class UserController : ControllerBase
 
         var result = await _bookingService.CancelBookingAsync(bookingId, userId);
         return _responseService.CreateResponse(result);
-    }
+     }
 }
