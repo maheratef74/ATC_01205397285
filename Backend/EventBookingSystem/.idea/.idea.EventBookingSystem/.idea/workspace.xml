@@ -9,7 +9,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c2749b1-bb74-4d43-9999-9213b06920ac" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.EventBookingSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EventBookingSystem/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.github/workflows/code-review.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.github/workflows/code-review.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +64,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Merging main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -125,7 +125,7 @@
       <workItem from="1746952205993" duration="11139000" />
       <workItem from="1746984512028" duration="3528000" />
       <workItem from="1747037538016" duration="30434000" />
-      <workItem from="1747330895907" duration="15049000" />
+      <workItem from="1747330895907" duration="15751000" />
     </task>
     <servers />
   </component>
