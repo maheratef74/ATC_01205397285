@@ -9,10 +9,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c2749b1-bb74-4d43-9999-9213b06920ac" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/DataAccessLayer/Filters/BookingFilter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataAccessLayer/Filters/EventFilter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EventBookingSystem.API/SwaggerUI/EnumSchemaFilter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EventBookingSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EventBookingSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessLogicLayer/Services/ResponseService/ResponseService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessLogicLayer/Services/ResponseService/ResponseService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/AuthenticationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/AuthenticationController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Dtos/AuthDtos/LoginDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Dtos/AuthDtos/LoginDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccessLayer/Repositories/Booking/BookingRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/Repositories/Booking/BookingRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccessLayer/Repositories/Booking/IBookingRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/Repositories/Booking/IBookingRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccessLayer/Repositories/Event/EventRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/Repositories/Event/EventRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccessLayer/Repositories/Event/IEventRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccessLayer/Repositories/Event/IEventRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/EventController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/EventController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/UserController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/EventBookingSystem.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/EventBookingSystem.API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +135,8 @@
       <workItem from="1746911076941" duration="16215000" />
       <workItem from="1746952205993" duration="11139000" />
       <workItem from="1746984512028" duration="3528000" />
-      <workItem from="1747037538016" duration="29100000" />
+      <workItem from="1747037538016" duration="30434000" />
+      <workItem from="1747330895907" duration="13571000" />
     </task>
     <servers />
   </component>
@@ -185,10 +194,10 @@
           <line>37</line>
           <properties documentPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/EventController.cs" containingFunctionPresentation="Method 'AddEvent'">
             <startOffsets>
-              <option value="1553" />
+              <option value="1555" />
             </startOffsets>
             <endOffsets>
-              <option value="1554" />
+              <option value="1556" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="11" />
@@ -207,32 +216,6 @@
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/EventBookingSystem.API/Controllers/EventController.cs</url>
-          <line>92</line>
-          <properties documentPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/EventController.cs" containingFunctionPresentation="Method 'GetUpcomingEvents'">
-            <startOffsets>
-              <option value="3828" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3829" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/DataAccessLayer/Repositories/Booking/BookingRepository.cs</url>
-          <line>75</line>
-          <properties documentPath="$PROJECT_DIR$/DataAccessLayer/Repositories/Booking/BookingRepository.cs" containingFunctionPresentation="Method 'GetBookedEventIdsByUserAsync'">
-            <startOffsets>
-              <option value="2272" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2273" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/BusinessLogicLayer/Services/BookingService/BookingService.cs</url>
           <line>32</line>
           <properties documentPath="$PROJECT_DIR$/BusinessLogicLayer/Services/BookingService/BookingService.cs" containingFunctionPresentation="Method 'CreateBookingAsync'">
@@ -247,13 +230,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/EventBookingSystem.API/Controllers/UserController.cs</url>
-          <line>29</line>
+          <line>35</line>
           <properties documentPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/UserController.cs" containingFunctionPresentation="Method 'GetUserBookings'">
             <startOffsets>
-              <option value="1161" />
+              <option value="1366" />
             </startOffsets>
             <endOffsets>
-              <option value="1162" />
+              <option value="1367" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="17" />
@@ -272,56 +255,30 @@
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/EventBookingSystem.API/Controllers/UserController.cs</url>
-          <line>39</line>
-          <properties documentPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/UserController.cs" containingFunctionPresentation="Method 'GetMyUpcomingBookings'">
+          <url>file://$PROJECT_DIR$/DataAccessLayer/Repositories/Booking/BookingRepository.cs</url>
+          <line>27</line>
+          <properties documentPath="$PROJECT_DIR$/DataAccessLayer/Repositories/Booking/BookingRepository.cs" containingFunctionPresentation="Method 'GetAllByUserAsync'">
             <startOffsets>
-              <option value="1562" />
+              <option value="835" />
             </startOffsets>
             <endOffsets>
-              <option value="1563" />
+              <option value="836" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/EventBookingSystem.API/Controllers/UserController.cs</url>
-          <line>52</line>
-          <properties documentPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/UserController.cs" containingFunctionPresentation="Method 'GetCompletedBookedEvents'">
-            <startOffsets>
-              <option value="2027" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2028" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/EventBookingSystem.API/Controllers/UserController.cs</url>
-          <line>64</line>
-          <properties documentPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/UserController.cs" containingFunctionPresentation="Method 'GetCancelledBookedEvents'">
-            <startOffsets>
-              <option value="2467" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2468" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="21" />
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/DataAccessLayer/Repositories/Booking/BookingRepository.cs</url>
-          <line>122</line>
-          <properties documentPath="$PROJECT_DIR$/DataAccessLayer/Repositories/Booking/BookingRepository.cs" containingFunctionPresentation="Method 'GetCancelledBookedEventsByUserAsync'">
+          <line>47</line>
+          <properties documentPath="$PROJECT_DIR$/DataAccessLayer/Repositories/Booking/BookingRepository.cs" containingFunctionPresentation="Method 'CountAllByUserAsync'">
             <startOffsets>
-              <option value="3908" />
+              <option value="1443" />
             </startOffsets>
             <endOffsets>
-              <option value="3909" />
+              <option value="1444" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="22" />
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

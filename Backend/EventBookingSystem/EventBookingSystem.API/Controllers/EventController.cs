@@ -2,7 +2,7 @@ using System.Security.Claims;
 using BusinessLogicLayer.Services.ResponseService;
 using BusinessLogicLayer.Shared;
 using DataAccessLayer.Entities;
-using DataAccessLayer.Enums;
+using DataAccessLayer.Filters;
 using DataAccessLayer.Repositories.Booking;
 using DataAccessLayer.Repositories.Event;
 using EventBookingSystem.API.Dtos.EventDto;
@@ -88,14 +88,17 @@ public class EventController:ControllerBase
         return _responseService.CreateResponse(Result<string>.SuccessMessage(_localizer["EventDeletedSuccessfully"]));
     }
     
-    [HttpGet("upcoming")]
-    public async Task<IActionResult> GetUpcomingEvents([FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 10)
+    [HttpGet]
+    public async Task<IActionResult> GetEvents(
+        [FromQuery] int pageNumber,
+        [FromQuery] int pageSize,
+        [FromQuery] EventFilter filter)
     {
         var user = _httpContextAccessor.HttpContext?.User;
         var userId = user?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
         
-        var events = await _eventRepository.GetUpcomingAsync(pageNumber, pageSize);
-        var totalCount = await _eventRepository.GetUpcomingTotalCountAsync();
+        var events = await _eventRepository.GetEventsAsync(pageNumber, pageSize , filter);
+        var totalCount = await _eventRepository.GetTotalCountAsync(filter);
 
         var bookedEventIds = await _bookingRepository.GetBookedEventIdsByUserAsync(userId);
 
@@ -111,31 +114,7 @@ public class EventController:ControllerBase
 
         return _responseService.CreateResponse(Result<PagedResult<EventDto>>.Success(result));
     }
-
-    [HttpGet("upcoming/category/{category}")]
-    public async Task<IActionResult> GetUpcomingEventsByCategory(EventCategory category, [FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 10)
-    {
-        var user = _httpContextAccessor.HttpContext?.User;
-        var userId = user?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-        
-        var events = await _eventRepository.GetUpcomingByCategoryAsync(category, pageNumber, pageSize);
-        var totalCount = await _eventRepository.GetUpcomingTotalCountByCategoryAsync(category);
-
-        var bookedEventIds = await _bookingRepository.GetBookedEventIdsByUserAsync(userId);
-        
-        var eventDtos = events.ToEventDtos(bookedEventIds);
-
-        var result = new PagedResult<EventDto>
-        {
-            Items = eventDtos,
-            Page = pageNumber,
-            PageSize = pageSize,
-            TotalItems = totalCount
-        };
-
-        return _responseService.CreateResponse(Result<PagedResult<EventDto>>.Success(result));
-    }
-
+    
     [HttpGet("category-counts")]
     public async Task<IActionResult> GetEventCountsByCategory()
     {

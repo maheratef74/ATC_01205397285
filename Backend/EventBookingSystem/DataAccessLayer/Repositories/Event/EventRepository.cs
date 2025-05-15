@@ -1,7 +1,9 @@
 using DataAccessLayer.DbContext;
 using DataAccessLayer.Enums;
+using DataAccessLayer.Filters;
 using EventBookingSystem.API.Dtos.EventDto;
 using Microsoft.EntityFrameworkCore;
+using EventBookingSystem.API.Dtos;
 
 namespace DataAccessLayer.Repositories.Event;
 using DataAccessLayer.Entities;
@@ -19,40 +21,36 @@ public class EventRepository : IEventRepository
         return await _dbContext.Events.FindAsync(eventId);
     }
 
-    public async Task<IEnumerable<Event>> GetUpcomingAsync(int pageNumber, int pageSize)
+    public async Task<IEnumerable<Event>> GetEventsAsync(int pageNumber, int pageSize , EventFilter filter)
     {
-        var now = DateTime.UtcNow;
-        return await _dbContext.Events
-            .Where(e => e.StartDate > now)
+        var query = _dbContext.Events.AsQueryable();
+        
+        if (filter.Category.HasValue)
+            query = query.Where(e => e.Category == filter.Category.Value);
+
+        if (filter.Status.HasValue)
+            query = query.Where(e => e.EventStatus == filter.Status.Value);
+        
+        return await query
             .OrderBy(e => e.StartDate)
             .Skip((pageNumber - 1) * pageSize)
             .Take(pageSize)
             .ToListAsync();
     }
-
-    public async Task<IEnumerable<Event>> GetUpcomingByCategoryAsync(EventCategory category, int pageNumber, int pageSize)
+    
+    public async Task<int> GetTotalCountAsync(EventFilter filter)
     {
-        var now = DateTime.UtcNow;
-        return await _dbContext.Events
-            .Where(e => e.Category == category && e.StartDate > now)
-            .OrderBy(e => e.StartDate)
-            .Skip((pageNumber - 1) * pageSize)
-            .Take(pageSize)
-            .ToListAsync();
-    }
+        var query = _dbContext.Events.AsQueryable();
 
-    public async Task<int> GetUpcomingTotalCountAsync()
-    {
-        var now = DateTime.UtcNow;
-        return await _dbContext.Events.CountAsync(e => e.StartDate > now);
-    }
+        if (filter.Category.HasValue)
+            query = query.Where(e => e.Category == filter.Category.Value);
 
-    public async Task<int> GetUpcomingTotalCountByCategoryAsync(EventCategory category)
-    {
-        var now = DateTime.UtcNow;
-        return await _dbContext.Events.CountAsync(e => e.Category == category && e.StartDate > now);
+        if (filter.Status.HasValue)
+            query = query.Where(e => e.EventStatus == filter.Status.Value);
+        
+        return await query.CountAsync();
     }
-
+    
     public async Task AddAsync(Event evt)
     {
         await _dbContext.Events.AddAsync(evt);

@@ -1,6 +1,9 @@
 using System.Security.Claims;
 using BusinessLogicLayer.Services.BookingService;
 using BusinessLogicLayer.Services.ResponseService;
+using BusinessLogicLayer.Shared;
+using DataAccessLayer.Enums;
+using DataAccessLayer.Filters;
 using DataAccessLayer.Repositories.Booking;
 using EventBookingSystem.API.Models.Booking;
 using Microsoft.AspNetCore.Authorization;
@@ -26,50 +29,24 @@ public class UserController : ControllerBase
     }
 
     [HttpGet("bookings")]
-    public async Task<IActionResult> GetUserBookings()
+    public async Task<IActionResult> GetUserBookings(
+        [FromQuery] int pageNumber,
+        [FromQuery] int pageSize,
+        [FromQuery] BookingFilter? filter)
     {
         var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
         
-        var bookings = await _bookingRepository.GetAllByUserAsync(userId);
+        var bookings = await _bookingRepository.GetAllByUserAsync(userId , filter , pageNumber, pageSize);
+        var totalCount = await _bookingRepository.CountAllByUserAsync(userId, filter);
         var bookingDtos = bookings.Select(b => b.ToDBookingto()).ToList();
-        return Ok(bookingDtos);
-    }
-    
-    [HttpGet("upcoming-bookings")]
-    public async Task<IActionResult> GetMyUpcomingBookings()  // upcoming booked by user
-    {
-        var user = _httpContextAccessor.HttpContext?.User;
-        var userId = user?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-        
-        var bookings = await _bookingRepository.GetUpcomingBookedEventByUserAsync(userId);
-        var bookingDtos = bookings.Select(b => b.ToDBookingto()).ToList();
-
-        return Ok(bookingDtos);
-    }
-    
-     
-    [HttpGet("completed-bookings")]   
-    public async Task<IActionResult> GetCompletedBookedEvents()
-    {
-        var user = _httpContextAccessor.HttpContext?.User;
-        var userId = user?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-
-        var bookings = await _bookingRepository.GetCompletedBookedEventsByUserAsync(userId);
-        var result = bookings.Select(b => b.ToDBookingto()).ToList();
-
-        return Ok(result);
-    }
-    
-    [HttpGet("cancelled-bookings")]
-    public async Task<IActionResult> GetCancelledBookedEvents()
-    {
-        var user = _httpContextAccessor.HttpContext?.User;
-        var userId = user?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-        
-        var bookings = await _bookingRepository.GetCancelledBookedEventsByUserAsync(userId);
-        var result = bookings.Select(b => b.ToDBookingto()).ToList();
-
-        return Ok(result);
+        var result = new PagedResult<BookingDto>()
+        {
+            Items = bookingDtos,
+            TotalItems = totalCount,
+            Page = pageNumber,
+            PageSize = pageSize
+        };
+        return _responseService.CreateResponse(result);
     }
     
     [HttpPut("cancel-booking/{bookingId}")]

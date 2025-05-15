@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Reflection;
 using System.Text;
 using BusinessLogicLayer.Jobs;
 using BusinessLogicLayer.Services.BookingService;
@@ -49,7 +50,6 @@ builder.Services.AddCors(options =>
                     "https://booking-system-tau-eight.vercel.app", // deployed frontend
                     "http://localhost:5173",                
                     "http://localhost:3000",                
-                    "http://eventsystem.runasp.net",        // deployed backend
                     "https://eventsystem.runasp.net"        // deployed backend
                 )
                 
@@ -92,6 +92,12 @@ builder.Services.AddSwaggerGen(c =>
         }
     });
     c.OperationFilter<AddLanguageHeaderParameter>();
+    
+    // OR to include both enum names and values:
+    c.SchemaFilter<EnumSchemaFilter>();
+    
+    var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 });
 
 #endregion
