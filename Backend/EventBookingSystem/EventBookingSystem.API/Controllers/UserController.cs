@@ -8,9 +8,11 @@ using DataAccessLayer.Repositories.Booking;
 using EventBookingSystem.API.Models.Booking;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 
 namespace EventBookingSystem.API.Controllers;
 
+[EnableRateLimiting("ApiPolicy")]
 [Authorize(AuthenticationSchemes = "Bearer")]
 [ApiController]
 [Route("api/user")]
@@ -57,5 +59,5 @@ public class UserController : ControllerBase
 
         var result = await _bookingService.CancelBookingAsync(bookingId, userId);
         return _responseService.CreateResponse(result);
-     }
+      }
 }

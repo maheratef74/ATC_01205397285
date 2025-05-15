@@ -7,10 +7,12 @@ using DataAccessLayer.Repositories.Booking;
 using EventBookingSystem.API.Models.Booking;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.Extensions.Localization;
 
 namespace EventBookingSystem.API.Controllers;
 
+[EnableRateLimiting("ApiPolicy")]
 [Authorize(AuthenticationSchemes = "Bearer")]
 [ApiController]
 [Route("api/bookings")]

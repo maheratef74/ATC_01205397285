@@ -10,10 +10,12 @@ using EventBookingSystem.API.Dtos.AuthDtos;
 using EventBookingSystem.API.Models.Auth;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.Extensions.Localization;
 
 namespace EventBookingSystem.API.Controllers;
 
+[EnableRateLimiting("ApiPolicy")]
 [Route("api/auth")]
 [ApiController]
 public class AuthenticationController : ControllerBase
