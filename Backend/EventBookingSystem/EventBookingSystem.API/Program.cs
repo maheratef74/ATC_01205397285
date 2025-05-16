@@ -55,14 +55,14 @@ builder.Services.AddRateLimiter(options =>
                 Window = TimeSpan.FromMinutes(1)  // per minute
             }));
     
-    /*// You can add multiple named policies
+    // You can add multiple named policies
     options.AddFixedWindowLimiter("ApiPolicy", opt =>
     {
         opt.PermitLimit = 30;
         opt.Window = TimeSpan.FromSeconds(30);
         opt.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;
         opt.QueueLimit = 10;
-    });*/
+    });
     
     // Configure rejection response
     options.OnRejected = async (context, token) =>
