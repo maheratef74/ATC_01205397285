@@ -13,6 +13,7 @@ using Microsoft.Extensions.Localization;
 namespace EventBookingSystem.API.Controllers;
 
 [EnableRateLimiting("ApiPolicy")]
+[Authorize(AuthenticationSchemes = "Bearer")]
 [Route("api/upload")]
 [ApiController]
 public class UploadController : ControllerBase

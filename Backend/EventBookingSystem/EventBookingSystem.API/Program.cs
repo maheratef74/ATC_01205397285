@@ -266,6 +266,6 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.MapControllers().RequireRateLimiting("ApiPolicy");;
+app.MapControllers().RequireRateLimiting("ApiPolicy");
 
 app.Run();

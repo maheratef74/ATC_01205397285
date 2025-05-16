@@ -10,6 +10,13 @@
   <component name="ChangeListManager">
     <list default="true" id="5c2749b1-bb74-4d43-9999-9213b06920ac" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../../.github/workflows/code-review.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.github/workflows/code-review.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.EventBookingSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EventBookingSystem/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/BookingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/BookingController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/EventController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/EventController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/UploadController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/UploadController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/UserController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventBookingSystem.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.sln.DotSettings.user" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,9 +49,8 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e8bde209c28449b6b57a361ec57454d5b2e200/9d/b63b75af/ExceptionDispatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c69576b4a074ad2839225611609498e344b7e2819997af48dbb2d2f8257f3/EntityFrameworkQueryableExtensions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/maher/RiderProjects/ATC_01205397285/Backend/EventBookingSystem/DataAccessLayer/Enums/EventCategory.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file:///usr/lib/dotnet/sdk/8.0.115/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -126,6 +132,7 @@
       <workItem from="1746984512028" duration="3528000" />
       <workItem from="1747037538016" duration="30434000" />
       <workItem from="1747330895907" duration="23974000" />
+      <workItem from="1747398323653" duration="2734000" />
     </task>
     <servers />
   </component>
@@ -268,6 +275,32 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/EventBookingSystem.API/Controllers/BookingController.cs</url>
+          <line>47</line>
+          <properties documentPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/BookingController.cs" containingFunctionPresentation="Method 'GetUpcomingEventBookings'">
+            <startOffsets>
+              <option value="2012" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2013" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/DataAccessLayer/Repositories/Booking/BookingRepository.cs</url>
+          <line>117</line>
+          <properties documentPath="$PROJECT_DIR$/DataAccessLayer/Repositories/Booking/BookingRepository.cs" containingFunctionPresentation="Method 'GetUpcomingEventBookingsAsync'">
+            <startOffsets>
+              <option value="3570" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3571" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
