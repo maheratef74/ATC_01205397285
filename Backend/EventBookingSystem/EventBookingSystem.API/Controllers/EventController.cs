@@ -15,7 +15,6 @@ using Microsoft.Extensions.Localization;
 namespace EventBookingSystem.API.Controllers;
 
 [EnableRateLimiting("ApiPolicy")]
-[Authorize(AuthenticationSchemes = "Bearer")]
 [ApiController]
 [Route("api/event")]
 public class EventController:ControllerBase

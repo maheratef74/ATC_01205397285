@@ -13,7 +13,6 @@ using Microsoft.AspNetCore.RateLimiting;
 namespace EventBookingSystem.API.Controllers;
 
 [EnableRateLimiting("ApiPolicy")]
-[Authorize(AuthenticationSchemes = "Bearer")]
 [ApiController]
 [Route("api/user")]
 public class UserController : ControllerBase
