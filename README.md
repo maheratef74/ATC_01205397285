@@ -7,6 +7,7 @@ This is the **backend** component of the **Event Booking System** developed usin
 📦EventBookingSystem
 
 ├── 📂EventBookingSystem.API → Presentation Layer (Controllers, Swagger)
+
 ├── 📂BusinessLogicLayer → (Services, Background Jobs)
 
 ├── 📂DataAccessLayer → (Repositories, Entities, EF Core)
