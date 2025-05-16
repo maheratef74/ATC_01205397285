@@ -51,18 +51,18 @@ builder.Services.AddRateLimiter(options =>
             factory: partition => new FixedWindowRateLimiterOptions
             {
                 AutoReplenishment = true,
-                PermitLimit = 100,  // 100 requests
+                PermitLimit = 30,  // 30 requests
                 Window = TimeSpan.FromMinutes(1)  // per minute
             }));
     
-    // You can add multiple named policies
+    /*// You can add multiple named policies
     options.AddFixedWindowLimiter("ApiPolicy", opt =>
     {
         opt.PermitLimit = 30;
         opt.Window = TimeSpan.FromSeconds(30);
         opt.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;
         opt.QueueLimit = 10;
-    });
+    });*/
     
     // Configure rejection response
     options.OnRejected = async (context, token) =>

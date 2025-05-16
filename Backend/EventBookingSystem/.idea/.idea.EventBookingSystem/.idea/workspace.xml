@@ -11,8 +11,6 @@
     <list default="true" id="5c2749b1-bb74-4d43-9999-9213b06920ac" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../../.github/workflows/code-review.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.github/workflows/code-review.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EventBookingSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EventBookingSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/UserController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/EventBookingSystem.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/EventBookingSystem.API.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EventBookingSystem.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBookingSystem.API/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -129,7 +127,7 @@
       <workItem from="1746952205993" duration="11139000" />
       <workItem from="1746984512028" duration="3528000" />
       <workItem from="1747037538016" duration="30434000" />
-      <workItem from="1747330895907" duration="18282000" />
+      <workItem from="1747330895907" duration="22416000" />
     </task>
     <servers />
   </component>
@@ -158,13 +156,13 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/EventBookingSystem.API/Controllers/AuthenticationController.cs</url>
-          <line>37</line>
+          <line>39</line>
           <properties documentPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/AuthenticationController.cs" containingFunctionPresentation="Method 'Register'">
             <startOffsets>
-              <option value="1476" />
+              <option value="1551" />
             </startOffsets>
             <endOffsets>
-              <option value="1477" />
+              <option value="1552" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="4" />
@@ -184,13 +182,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/EventBookingSystem.API/Controllers/EventController.cs</url>
-          <line>37</line>
+          <line>39</line>
           <properties documentPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/EventController.cs" containingFunctionPresentation="Method 'AddEvent'">
             <startOffsets>
-              <option value="1555" />
+              <option value="1630" />
             </startOffsets>
             <endOffsets>
-              <option value="1556" />
+              <option value="1631" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="11" />
@@ -223,13 +221,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/EventBookingSystem.API/Controllers/UserController.cs</url>
-          <line>35</line>
+          <line>37</line>
           <properties documentPath="$PROJECT_DIR$/EventBookingSystem.API/Controllers/UserController.cs" containingFunctionPresentation="Method 'GetUserBookings'">
             <startOffsets>
-              <option value="1366" />
+              <option value="1441" />
             </startOffsets>
             <endOffsets>
-              <option value="1367" />
+              <option value="1442" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="17" />
