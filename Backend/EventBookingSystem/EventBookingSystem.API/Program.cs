@@ -18,6 +18,7 @@ using DataAccessLayer.Repositories.Booking;
 using DataAccessLayer.Repositories.Event;
 using DataAccessLayer.Repositories.UploadedFile;
 using DataAccessLayer.Repositories.User;
+using EventBookingSystem.API.middleware;
 using EventBookingSystem.API.SwaggerUI;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -32,6 +33,7 @@ using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
@@ -40,6 +42,13 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 var Configuration = builder.Configuration;
 
+
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .WriteTo.File("Logs/requests.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
+
+builder.Host.UseSerilog();
 #region RateLimite
 
 builder.Services.AddRateLimiter(options =>
@@ -263,8 +272,11 @@ app.UseRequestLocalization(localizationOptions);
 app.UseHttpsRedirection();
 
 
+
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseMiddleware<RequestLoggingMiddleware>();
 
 app.MapControllers().RequireRateLimiting("ApiPolicy");
 
