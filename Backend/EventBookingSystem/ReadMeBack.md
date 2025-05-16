@@ -3,15 +3,6 @@
 This is the **backend** component of the **Event Booking System** developed using **ASP.NET Core Web API**. It provides secure authentication, event management, and booking functionality with support for multi-language (English/Arabic), background jobs, image upload, and email confirmation.
 
 ## 📁 Project Structure (Three-Layer Architecture)
-
-📦EventBookingSystem
-
-├── 📂EventBookingSystem.API → Presentation Layer (Controllers, Swagger)
-
-├── 📂BusinessLogicLayer → (Services, Background Jobs)
-
-├── 📂DataAccessLayer → (Repositories, Entities, EF Core)
-
 ---
 
 ## 🚀 Features
@@ -38,7 +29,6 @@ This is the **backend** component of the **Event Booking System** developed usin
 ```bash
 git clone https://github.com/maheratef74/ATC_01205397285.git
 cd ATC_01205397285
-```
 
 2. Run the API
 
@@ -54,17 +44,11 @@ https://ayadtytest.runasp.net/swagger/index.html
 
 👥 Default Accounts
 
-🛠 Admin Account
+Role	          Email	                             Password
 
-Email: admin@gmail.com
+Admin	          admin@gmail.com                    123456
 
-Password: 123456
-
-👤 User Account
-
-Email: maheratef600@gmail.com
-
-Password: 123456
+User	          maheratef600@gmail.com	           123456
 
 
 🧠 AI Tools Used
