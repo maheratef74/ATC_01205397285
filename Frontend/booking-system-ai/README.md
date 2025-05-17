@@ -1,5 +1,5 @@
 # 🎉 Event Booking System - Frontend (React)
-This is the frontend of the Event Booking System, developed using React. It enables users to browse and book events, view event details, and provides a role-based admin panel for managing events. The UI supports multi-language (English/Arabic) and is built using custom components and modern React best practices. This project was developed with the assistance of AI tools.
+This is the frontend of the Event Booking System, developed using React. It enables users to browse and book events, view event details, and provides a role-based admin panel for managing events. and is built using custom components and modern React best practices. This project was developed with the assistance of AI tools.
 ---  
 
 🚀 Features
