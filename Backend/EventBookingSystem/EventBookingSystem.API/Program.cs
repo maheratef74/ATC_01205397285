@@ -92,7 +92,7 @@ builder.Services.AddCors(options =>
         policy =>
         {
             policy.WithOrigins(
-                    "https://booking-system-tau-eight.vercel.app", // deployed frontend
+                    "https://booking-system-three-hazel.vercel.app", // deployed frontend
                     "http://localhost:5173",                
                     "http://localhost:3000",                
                     "https://eventsystem.runasp.net"        // deployed backend
