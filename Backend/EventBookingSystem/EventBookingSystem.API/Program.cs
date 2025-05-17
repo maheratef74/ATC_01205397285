@@ -281,14 +281,4 @@ app.UseAuthorization();
 app.UseMiddleware<RequestLoggingMiddleware>();
 
 app.MapControllers().RequireRateLimiting("ApiPolicy");
-app.UseStaticFiles(); // Already enables wwwroot'
-
-var env = app.Environment;
-// Add this to serve files from Uploads directory
-app.UseStaticFiles(new StaticFileOptions
-{
-    FileProvider = new PhysicalFileProvider(
-        Path.Combine(env.ContentRootPath, "Uploads")),
-    RequestPath = "/Uploads"
-});
 app.Run();
