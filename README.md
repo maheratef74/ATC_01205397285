@@ -101,7 +101,7 @@ This project was developed using AI assistance from:
 
 ---  
 
-🎉 Event Booking System - Frontend (React)
+# 🎉 Event Booking System - Frontend (React)
 This is the frontend of the Event Booking System, developed using React. It enables users to browse and book events, view event details, and provides a role-based admin panel for managing events. The UI supports multi-language (English/Arabic) and is built using custom components and modern React best practices. This project was developed with the assistance of AI tools.
 ---  
 
@@ -147,6 +147,11 @@ Email: maheratef600@gmail.com
 
 Password: 123456
 
+
+🌐 Frontend web : 
+https://booking-system-three-hazel.vercel.app/
+
+
 🧠 AI Tools Used
 This project was developed with the support of multiple AI tools to enhance productivity, improve code quality, and streamline development:
 
@@ -159,5 +164,3 @@ This project was developed with the support of multiple AI tools to enhance prod
 📚 Courser — used for structured learning and guidance during the implementation of various frontend features and best practices.
 
 
-🌐 Frontend web : 
-https://booking-system-ai.vercel.app
