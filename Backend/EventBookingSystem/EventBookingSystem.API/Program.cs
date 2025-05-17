@@ -28,6 +28,7 @@ using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;
@@ -280,5 +281,14 @@ app.UseAuthorization();
 app.UseMiddleware<RequestLoggingMiddleware>();
 
 app.MapControllers().RequireRateLimiting("ApiPolicy");
+app.UseStaticFiles(); // Already enables wwwroot'
 
+var env = app.Environment;
+// Add this to serve files from Uploads directory
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(
+        Path.Combine(env.ContentRootPath, "Uploads")),
+    RequestPath = "/Uploads"
+});
 app.Run();

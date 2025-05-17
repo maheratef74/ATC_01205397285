@@ -34,15 +34,6 @@ public class UploadController : ControllerBase
     }
     
     [Authorize(Roles = Roles.Admin)]
-    [HttpGet]
-    [Route("all")]
-    public async Task<IActionResult> GetAllFiles()
-    {
-        return _responseService.CreateResponse(
-            Result<List<UploadedFile>>.Success(await _uploadedFileRepositry.GetAllFiles()));   
-    }
-    
-    [Authorize(Roles = Roles.Admin)]
     [HttpPost]
     public async Task<IActionResult> UploadFile(UploadFileRequest request)
     {
@@ -66,6 +57,8 @@ public class UploadController : ControllerBase
                 _ => NotFound(_localizer[errorKey])
             };
         }
-        return File(stream!, contentType, downloadName);
+
+        var fileUrl = $"{Request.Scheme}://{Request.Host}/Uploads/{fileName}";
+        return Ok(new { url = fileUrl });
     }
 }
