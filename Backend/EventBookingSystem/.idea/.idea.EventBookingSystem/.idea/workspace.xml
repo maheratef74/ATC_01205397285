@@ -8,9 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c2749b1-bb74-4d43-9999-9213b06920ac" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.EventBookingSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EventBookingSystem/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="5c2749b1-bb74-4d43-9999-9213b06920ac" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -130,6 +128,7 @@
       <workItem from="1747481699122" duration="7058000" />
       <workItem from="1747490219291" duration="397000" />
       <workItem from="1747513335474" duration="2175000" />
+      <workItem from="1747571520411" duration="845000" />
     </task>
     <servers />
   </component>

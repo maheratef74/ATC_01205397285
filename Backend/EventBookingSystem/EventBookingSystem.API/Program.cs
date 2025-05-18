@@ -61,14 +61,14 @@ builder.Services.AddRateLimiter(options =>
             factory: partition => new FixedWindowRateLimiterOptions
             {
                 AutoReplenishment = true,
-                PermitLimit = 30,  // 30 requests
+                PermitLimit = 100,  // 30 requests
                 Window = TimeSpan.FromMinutes(1)  // per minute
             }));
     
     // You can add multiple named policies
     options.AddFixedWindowLimiter("ApiPolicy", opt =>
     {
-        opt.PermitLimit = 30;
+        opt.PermitLimit = 100;
         opt.Window = TimeSpan.FromSeconds(30);
         opt.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;
         opt.QueueLimit = 10;
