@@ -1,54 +1,58 @@
-# React + TypeScript + Vite
+# 🎉 Event Booking System - Frontend (React)
+This is the frontend of the Event Booking System, developed using React. It enables users to browse and book events, view event details, and provides a role-based admin panel for managing events. and is built using custom components and modern React best practices. This project was developed with the assistance of AI tools.
+---  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Features
+- ✅ User Authentication (Login / Register using JWT)
+- 🎫 Event Listings with "Book Now" or "Booked" status
+- 📄 Event Details Page with booking option
+- 🎉 Booking Confirmation Screen
+- 🧑‍💼 Admin Panel for event management (CRUD)
+- 🌍 Multi-language support (English 🇺🇸 / Arabic 🇸🇦)
+- 🎨 Responsive, clean UI with Flexbox/Grid layout
+- 🔐 Role-based Access Control (Admin/User)
 
-Currently, two official plugins are available:
+---  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+⚙️ Installation & Setup
+✅ Prerequisites
+Node.js (v18 or later)
 
-## Expanding the ESLint configuration
+npm 
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+📦 Setup
+Clone the repository:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+git clone https://github.com/maheratef74/ATC_01205397285.git
+cd ATC_01205397285/frontend
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm install
+npm start
 ```
+
+👥 Default Test Accounts
+🛠 Admin
+Email: admin@gmail.com
+
+Password: 123456
+
+👤 User
+Email: maheratef600@gmail.com
+
+Password: 123456
+
+
+🌐 Frontend web : 
+https://booking-system-three-hazel.vercel.app/
+
+
+🧠 AI Tools Used
+This project was developed with the support of multiple AI tools to enhance productivity, improve code quality, and streamline development:
+
+🤖 ChatGPT — used extensively for generating React components, resolving bugs, planning architecture, and improving UI logic.
+
+🧠 GitHub Copilot — provided real-time suggestions and boilerplate code while coding in VS Code.
+
