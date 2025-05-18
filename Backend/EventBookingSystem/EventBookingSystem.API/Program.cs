@@ -86,25 +86,16 @@ builder.Services.AddRateLimiter(options =>
 #endregion
 
 #region CORS
-
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowReactApp",
-        policy =>
-        {
-            policy.WithOrigins(
-                    "https://booking-system-three-hazel.vercel.app", // deployed frontend
-                    "https://booking-system-ai.vercel.app",
-                    "http://localhost:5173",                
-                    "http://localhost:3000",                
-                    "https://eventsystem.runasp.net"        // deployed backend
-                )
-                
-                .AllowAnyHeader()
-                .AllowAnyMethod();
-        });
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy
+            .AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
 });
-
 #endregion
 
 
@@ -268,7 +259,8 @@ catch (Exception ex)
 app.UseSwagger();
 app.UseSwaggerUI();
 
-app.UseCors("AllowReactApp");
+app.UseCors("AllowAll");
+
 app.UseRequestLocalization(localizationOptions);
 
 app.UseHttpsRedirection();
