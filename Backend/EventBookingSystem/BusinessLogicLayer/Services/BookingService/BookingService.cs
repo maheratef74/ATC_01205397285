@@ -62,7 +62,6 @@ public class BookingService : IBookingService
 
         var emailSubject = _localizer["EmailBookingSubject"];
         var emailBody = GenerateBookingConfirmationEmail(userExists, eventExists);
-        await _emailService.SendEmailAsync(userExists.Email, emailSubject, emailBody);
         
         await _emailService.SendEmailAsync(userExists.Email, emailSubject, emailBody);
 
