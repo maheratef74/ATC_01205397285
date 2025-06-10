@@ -1,4 +1,4 @@
-#  Event Booking System - Backend (ASP.NET Core API)       
+#  Event Booking System - Backend (ASP.NET Core API)        
 
 This is the **backend** component of the **Event Booking System** developed using **ASP.NET Core Web API**. It provides secure authentication, event management, and booking functionality with support for multi-language (English/Arabic), background jobs, image upload, and email confirmation.
 
