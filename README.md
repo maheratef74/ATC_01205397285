@@ -49,7 +49,7 @@ dotnet run --project EventBookingSystem.API
 🧪 Local Development:
 http://localhost:xxxx/swagger/index.html
 
-🌐 Production API: (https://eventsystem.runasp.net/swagger/index.html)
+🌐 Production API: (https://eventsystem7422.runasp.net/swagger/index.html)
 
 👥 Default Accounts
 
